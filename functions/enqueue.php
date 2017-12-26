@@ -22,6 +22,9 @@ function enqueue_scripts_method() {
 
 	// Define CSS
 
+	$typothequecss = 'https://fonts.typotheque.com/WF-030602-010148.css';
+	wp_register_style('typothequecss',$typothequecss, false);
+
 	$fontscss = get_stylesheet_directory_uri() . '/fonts/fonts.css';
 	wp_register_style('fontscss',$fontscss, false, $version);
 
@@ -34,6 +37,7 @@ function enqueue_scripts_method() {
 
 	wp_enqueue_script( 'layoutjs',array('jquery'));
 
+	wp_enqueue_style( 'typothequecss');
 	wp_enqueue_style( 'fontscss');
 	wp_enqueue_style( 'themecss');
 
