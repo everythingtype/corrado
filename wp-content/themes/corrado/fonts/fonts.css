@@ -1,0 +1,11 @@
+/* Trio */
+
+@font-face{
+	font-family:"Univers";
+	font-weight: 400;
+	font-style: normal;
+	src:url("commercial/triogrotesk-normal-v102.eot?#iefix");
+	src:url("commercial/triogrotesk-normal-v102.eot?#iefix") format("eot"),
+		url("commercial/triogrotesk-normal-v102.woff2") format("woff2"),
+		url("commercial/triogrotesk-normal-v102.woff") format("woff");
+}

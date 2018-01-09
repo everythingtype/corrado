@@ -7,6 +7,9 @@
 Thumbs.db
 robots.txt
 
+# do not give away commercial fonts
+wp-content/themes/corrado/fonts/commercial/*
+
 # wordpress specific
 wp-config.php
 wp-content/plugins/

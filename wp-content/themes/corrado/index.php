@@ -24,96 +24,103 @@
 
 <body>
 
-<header class="banner" role="banner">
+	<header class="banner" role="banner">
 
-	<div class="logo">
-		<span class="screenreadertext">Corrado Financial Group</span>
+		<div class="margin">
+
+			<div class="logowrap">
+				<span class="screenreadertext">Corrado Financial Group</span>
+				<div class="logo"></div>
+				<div class="monogram"></div>
+				<div class="wordmark"></div>
+			</div>
+
+			<nav role="navigation">
+				<ul>
+					<li><a href="http://corrado.local/">Login</a></li>
+					<li><button class="tocontact">Contact</button></li>
+				</ul>
+			</nav>
+
+		</div>
+
+	</header>
+
+	<div class="intro">
+	<div class="margin">
+	<h1>We help our clients plan and chart their financial futures.</h1>
+
+	<img src="<?php echo get_stylesheet_directory_uri() ?>/images/illustration.jpg">
+	</div>
 	</div>
 
-	<nav role="navigation">
-		<ul>
-			<li><a href="">Login</a></li>
-			<button>Contact</button>
-		</ul>
-	</nav>
+	<main role="main">
 
-</header>
+	<h2>Who We Are</h2>
 
-<div class="intro">
-<div class="margin">
-<h1>We help our clients plan and chart their financial futures.</h1>
+	<p>We began as an accounting firm. In the two decades since, we’ve come to understand that many of our clients needed more than someone to file their tax returns—they needed advisors who understand the full scope of their financial lives. They needed guidance on their investment portfolio, help with planning for retirement, direction on writing their wills, their pre-nups, their insurances.</p> 
 
-<img src="<?php echo get_stylesheet_directory_uri() ?>/images/illustration.jpg" />
-</div>
-</div>
+	<p>We’ve found that our relationships-first approach to financial planning gives our clients the freedom to realize their best selves. We help our clients plan for their financial future — so that they can live more fully in the present.</p>
 
-<main role="main">
+	<h3>What We Do</h3>
 
-<h2>Who We Are</h2>
+	<ul>
+	<li>Wealth Management</li>
+	<li>Tax Planning</li>
+	<li>Retirement &amp; Estate Planning</li>
+	<li>Insurance</li>
+	<li>Business Services</li>
+	</ul>
 
-<p>We began as an accounting firm. In the two decades since, we&rsquo;ve come to understand that many of our clients needed more than someone to file their tax returns—they needed advisors who understand the full scope of their financial lives. They needed guidance on their investment portfolio, help with planning for retirement, direction on writing their wills, their pre-nups, their insurances.</p> 
+	</main>
 
-<p>We&rsquo;ve found that our relationships-first approach to financial planning gives our clients the freedom to realize their best selves. We help our clients plan for their financial future &mdash; so that they can live more fully in the present.</p>
+	<footer role="contentinfo">
 
-<h3>What We Do</h3>
+	<h2 id="contactus">Contact Us</h2>
 
-<ul>
-<li>Wealth Management</li>
-<li>Tax Planning</li>
-<li>Retirement &amp; Estate Planning</li>
-<li>Insurance</li>
-<li>Business Services</li>
-</ul>
+	<div class="items">
 
-</main>
+		<div class="item">
 
-<footer role="contentinfo">
+			<h3>General</h3>
 
-<h2>Contact Us</h2>
+			<address><a href="mailto:info@corradofg.com">info@corradofg.com</a><br>
+			201.661.6600</address>
 
-<div class="items">
+		</div>
 
-	<div class="item">
+		<div class="item">
 
-		<h3>General</h3>
+			<h3>New Business</h3>
 
-		<address><a href="mailto:info@corradofg.com">info@corradofg.com</a><br />
-		201.661.6600</address>
+			<address>Daniel P. Rosaschi<br>
+			<a href="mailto:drosaschi@corradofg.com">drosaschi@corradofg.com</a></address>
 
-	</div>
+		</div>
 
-	<div class="item">
+		<div class="item">
 
-		<h3>New Business</h3>
+			<h3>New Jersey</h3>
 
-		<address>Daniel P. Rosaschi<br />
-		<a href="mailto:drosaschi@corradofg.com">drosaschi@corradofg.com</a></address>
+			<address>48 S. Franklin Turnpike<br>
+			Suite #300<br>
+			Ramsey, NJ 07446</address>
 
-	</div>
+		</div>
 
-	<div class="item">
+		<div class="item">
 
-		<h3>New Jersey</h3>
+			<h3>New York</h3>
 
-		<address>48 S. Franklin Turnpike<br />
-		Suite #300<br />
-		Ramsey, NJ 07446</address>
+			<address>25 W. 43rd Street<br>
+			Suite #920<br>
+			New York, NY 10036</address>
+
+		</div>
 
 	</div>
 
-	<div class="item">
-
-		<h3>New York</h3>
-
-		<address>25 W. 43rd Street<br />
-		Suite #920<br />
-		New York, NY 10036</address>
-
-	</div>
-
-</div>
-
-</footer>
+	</footer>
 
 <?php wp_footer(); ?>
 

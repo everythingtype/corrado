@@ -25,28 +25,86 @@ address { font-style: normal;}
 
 .screenreadertext { clip: rect(1px, 1px, 1px, 1px); clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px); position: absolute !important; white-space: nowrap; height: 1px; width: 1px; overflow: hidden; }
 
+@media screen and (max-width: 935px) {
+
+	body { font-size: 1.825rem; line-height: 1.5002739726; }
+	h1 { font-size: 3.5rem; line-height: 1.1428571429; margin: 3.1rem 0 2.9rem 0; }
+	h2 { font-size: 3.194rem; margin: 3rem 0 6.5rem 0; }
+	h3 { font-size: 1.825rem; margin: 6.9rem 0 2rem 0; }
+
+}
+
+
 /* Banner */
 
 .banner { position: fixed; top: 0; left: 0; right: 0; background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: sans-serif; letter-spacing: .045em; }
-.banner .logo { width: 26.8rem; height: 7.9rem; background-image: url('images/corrado-logo.svg'); background-size: 26.8rem 7.9rem; background-repeat: no-repeat; margin: 3.9rem 6.9rem; float: left; }
+.banner .margin { padding: 3.9rem 6.9rem; overflow: hidden; transition: padding 0.5s ease; }
+.banner .logowrap { width: 26.8rem; height: 7.9rem; float: left; position: relative; }
 
-.banner nav { float: right; padding: 5.3rem 6.9rem; }
+.banner .logo { width: 26.8rem; height: 7.9rem; background-image: url('images/corrado-stacked.svg'); background-size: 26.8rem 7.9rem; background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; }
+.banner .monogram { width: 7.9rem; height: 7.9rem; background-image: url('images/corrado-monogram.svg'); background-size: 7.9rem 7.9rem; background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; }
+.banner .wordmark { display: none; width: 41.1rem; height: 7.9rem; background-image: url('images/corrado-wordmark.svg'); background-size: 41.1rem 1.6rem; background-repeat: no-repeat; background-position: center center; position: absolute; top: 0; left: 0; }
+
+.banner.scrolled .logo { display: none; }
+.banner.scrolled .monogram { display: none; }
+.banner.scrolled .wordmark { display: block; }
+
+.banner nav { float: right; padding: 1.4rem 0 0 0; }
 .banner ul { margin: 0; padding: 0; list-style: none; }
 .banner li { display: inline-block; }
 .banner a { color: #000; }
 .banner button { font: inherit; text-transform: inherit; letter-spacing: inherit; border: none; background: #000; color: #fff; }
 
+@media screen and (max-width: 935px) {
+
+	.banner .margin { padding: 2.9rem; }
+
+	.banner .logowrap { width: 14.7rem; height: 4.2757rem; }
+	.banner .logo { width: 14.7rem; height: 4.2757rem; background-size: 14.7rem 4.2757rem; }
+	.banner .monogram { width: 4.2757rem; height: 4.2757rem; background-size: 4.2757rem 4.2757rem; }
+	.banner .wordmark { width: 14.7rem; height: 4.2757rem; background-size: 14.7rem 4.2757rem; }
+	.banner nav { padding: 0; }
+
+	.banner.scrolled .margin { padding: 1.3rem 3rem 1.4rem 3rem; }
+	.banner.scrolled .monogram { display: block; }
+	.banner.scrolled .wordmark { display: none; }
+
+
+	.banner a { display: none; }
+}
+
+
+
 /* Intro */
 
 .intro { background: #fff; color: #000; line-height: 1.1666666667; }
-.intro .margin { max-width: 120rem; margin: auto; padding: 15.7rem 0 14.4rem 0; }
+.intro .margin { max-width: 120rem; margin: auto; padding: 15.7rem 3rem 13.7rem 3rem; }
 .intro h1 { max-width: 87.5rem; }
+
+@media screen and (max-width: 935px) {
+
+	.intro .margin { padding: 12.6rem 2.9rem 7.4rem 2.9rem; }
+
+}
+
+
 
 /* Main */
 
 main { max-width: 105rem; padding: 11.7rem 4rem 0 1rem; margin: auto; box-sizing: border-box; }
 main ul { margin: 5.5rem 0 2rem 0; padding: 0 0 0 .9rem; letter-spacing: .02em; }
-main li { margin: 1.9rem; padding: 0 0 0 4.3rem; }
+main li { margin: 1.9rem 0 1.9rem 1.9rem; padding: 0 0 0 4.3rem; }
+
+@media screen and (max-width: 935px) {
+
+	main { padding: 2.6rem 2.9rem 0 2.9rem; }
+
+	main ul { margin: 3.3rem 0 2rem 0; padding: 0 0 0 1.9rem;  }
+	main li { margin: 0.05rem 0 0.05rem 0.05rem; padding: 0 0 0 1.3rem; }
+
+
+}
+
 
 /* Footer */
 
@@ -57,3 +115,14 @@ footer .item:nth-child(odd) { clear: both; }
 footer .item:nth-child(even) { padding-left: 7.5rem }
 
 footer h3 { text-transform: uppercase; font-size: 2rem; letter-spacing: .003em; font-family: sans-serif; font-weight: 300; letter-spacing: .045em; margin: 1.7rem 0 3rem 0; }
+
+@media screen and (max-width: 935px) {
+
+	footer { padding: 9.4rem 2.9rem; }
+	footer .item { width: 100%; float: none; padding: 0; }
+	footer .item:nth-child(even) { padding-left: 0; }
+
+	footer h2 { margin: 3rem 0 0 0; }
+	footer h3 { font-size: 1.3rem; margin: 5.1rem 0 1.4rem 0; }
+
+}
