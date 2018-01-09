@@ -9,6 +9,14 @@ Developed by Spellerberg Associates, http://www.spellerbergassociates.com/
 */
 
 html { font-size: 62.5%; }
+html * { outline: none; }
+
+[data-whatinput="keyboard"] a:focus, 
+	[data-whatinput="keyboard"] button:focus, 
+	[data-whatinput="keyboard"] #s:focus, 
+	[data-whatinput="keyboard"] #s2:focus { outline: auto; }
+
+
 body { background: #000; color: #fff; margin: 0; padding: 0; font-size: 3.5rem; line-height: 1.2857142857; font-family: "William Text", serif; letter-spacing: .0065em; font-style: normal; font-weight: 300; text-rendering: optimizeLegibility; }
 
 a { text-decoration: none; color: #fff; }
@@ -37,7 +45,10 @@ address { font-style: normal;}
 
 /* Banner */
 
-.banner { position: fixed; top: 0; left: 0; right: 0; background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: sans-serif; letter-spacing: .045em; }
+.banner {background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: "Trio", sans-serif; letter-spacing: .045em; }
+.banner.clone { position: fixed; top: 0; left: 0; right: 0; background: yellow; }
+
+
 .banner .margin { padding: 3.9rem 6.9rem; overflow: hidden; transition: padding 0.5s ease; }
 .banner .logowrap { width: 26.8rem; height: 7.9rem; float: left; position: relative; }
 
@@ -52,11 +63,12 @@ address { font-style: normal;}
 .banner nav { float: right; padding: 1.4rem 0 0 0; }
 .banner ul { margin: 0; padding: 0; list-style: none; }
 .banner li { display: inline-block; }
-.banner a { color: #000; }
-.banner button { font: inherit; text-transform: inherit; letter-spacing: inherit; border: none; background: #000; color: #fff; }
+.banner a { color: #000; padding: 1.4rem 2.2rem 1.6rem 2.2rem; display: inline-block; }
+.banner a.button { background: #000; color: #fff; }
 
 @media screen and (max-width: 935px) {
 
+	.banner { font-size: 1.184rem; }
 	.banner .margin { padding: 2.9rem; }
 
 	.banner .logowrap { width: 14.7rem; height: 4.2757rem; }
@@ -69,8 +81,9 @@ address { font-style: normal;}
 	.banner.scrolled .monogram { display: block; }
 	.banner.scrolled .wordmark { display: none; }
 
-
-	.banner a { display: none; }
+	.banner nav { padding: 0.6rem 0 0 0; }
+	.banner a { display: none; padding: .8rem 1.1rem 1.1rem 1.1rem; }
+	.banner a.button { display: inline-block; }
 }
 
 
@@ -78,7 +91,7 @@ address { font-style: normal;}
 /* Intro */
 
 .intro { background: #fff; color: #000; line-height: 1.1666666667; }
-.intro .margin { max-width: 120rem; margin: auto; padding: 15.7rem 3rem 13.7rem 3rem; }
+.intro .margin { max-width: 120rem; margin: auto; padding: 0 3rem 13.7rem 3rem; overflow: hidden; }
 .intro h1 { max-width: 87.5rem; }
 
 @media screen and (max-width: 935px) {
@@ -114,7 +127,7 @@ footer .item { width: 50%; float: left; padding: 0 0 9.2rem 0; box-sizing: borde
 footer .item:nth-child(odd) { clear: both; }
 footer .item:nth-child(even) { padding-left: 7.5rem }
 
-footer h3 { text-transform: uppercase; font-size: 2rem; letter-spacing: .003em; font-family: sans-serif; font-weight: 300; letter-spacing: .045em; margin: 1.7rem 0 3rem 0; }
+footer h3 { text-transform: uppercase; font-size: 2rem; letter-spacing: .003em; font-family: "Trio", sans-serif; font-weight: 300; letter-spacing: .045em; margin: 1.7rem 0 3rem 0; }
 
 @media screen and (max-width: 935px) {
 
