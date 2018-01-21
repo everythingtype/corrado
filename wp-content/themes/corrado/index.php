@@ -50,7 +50,7 @@
 	<div class="margin">
 	<h1>We help our clients plan and chart their financial futures.</h1>
 
-	<img src="<?php echo get_stylesheet_directory_uri() ?>/images/illustration.jpg">
+	<img src="<?php echo get_stylesheet_directory_uri() ?>/images/illustration.png">
 	</div>
 	</div>
 
