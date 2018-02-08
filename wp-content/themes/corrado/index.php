@@ -26,6 +26,28 @@
 
 	<header class="banner" role="banner">
 
+		<div id="bannerspacer" class="bannerspacer"></div>
+		<div class="margin">
+
+			<div class="logowrap">
+				<span class="screenreadertext">Corrado Financial Group</span>
+				<div class="logo"></div>
+				<div class="monogram"></div>
+			</div>
+
+			<nav role="navigation">
+				<ul>
+					<li><a target="_blank" href="https://www.clientaxcess.com/#/login">Login</a></li>
+					<li><a href="#contactus" class="button tocontact">Contact</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+	</header>
+
+	<header class="fixedbanner" role="banner">
+
 		<div class="margin">
 
 			<div class="logowrap">
@@ -45,6 +67,8 @@
 		</div>
 
 	</header>
+
+
 
 	<div class="intro">
 	<div class="margin">

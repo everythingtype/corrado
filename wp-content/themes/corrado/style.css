@@ -46,19 +46,12 @@ address { font-style: normal;}
 /* Banner */
 
 .banner {background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: "Trio", sans-serif; letter-spacing: .045em; }
-.banner.clone { position: fixed; top: 0; left: 0; right: 0; background: yellow; }
 
-
-.banner .margin { padding: 3.9rem 6.9rem; overflow: hidden; transition: padding 0.5s ease; }
+.banner .margin { padding: 3.9rem 6.9rem; overflow: hidden; }
 .banner .logowrap { width: 26.8rem; height: 7.9rem; float: left; position: relative; }
 
 .banner .logo { width: 26.8rem; height: 7.9rem; background-image: url('images/corrado-stacked.svg'); background-size: 26.8rem 7.9rem; background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; }
 .banner .monogram { width: 7.9rem; height: 7.9rem; background-image: url('images/corrado-monogram.svg'); background-size: 7.9rem 7.9rem; background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; }
-.banner .wordmark { display: none; width: 41.1rem; height: 7.9rem; background-image: url('images/corrado-wordmark.svg'); background-size: 41.1rem 1.6rem; background-repeat: no-repeat; background-position: center center; position: absolute; top: 0; left: 0; }
-
-.banner.scrolled .logo { display: none; }
-.banner.scrolled .monogram { display: none; }
-.banner.scrolled .wordmark { display: block; }
 
 .banner nav { float: right; padding: 1.4rem 0 0 0; }
 .banner ul { margin: 0; padding: 0; list-style: none; }
@@ -69,23 +62,50 @@ address { font-style: normal;}
 @media screen and (max-width: 935px) {
 
 	.banner { font-size: 1.184rem; }
-	.banner .margin { padding: 2.9rem; }
+	.banner .bannerspacer { padding-top: 1.6rem; }
+	.banner .margin { padding: 1.3rem 2.9rem 1.4rem 2.9rem; }
 
 	.banner .logowrap { width: 14.7rem; height: 4.2757rem; }
 	.banner .logo { width: 14.7rem; height: 4.2757rem; background-size: 14.7rem 4.2757rem; }
 	.banner .monogram { width: 4.2757rem; height: 4.2757rem; background-size: 4.2757rem 4.2757rem; }
-	.banner .wordmark { width: 14.7rem; height: 4.2757rem; background-size: 14.7rem 4.2757rem; }
 	.banner nav { padding: 0; }
-
-	.banner.scrolled .margin { padding: 1.3rem 3rem 1.4rem 3rem; }
-	.banner.scrolled .monogram { display: block; }
-	.banner.scrolled .wordmark { display: none; }
 
 	.banner nav { padding: 0.6rem 0 0 0; }
 	.banner a { display: none; padding: .8rem 1.1rem 1.1rem 1.1rem; }
 	.banner a.button { display: inline-block; }
+
 }
 
+/* Fixed Banner */
+
+.fixedbanner { display: none; background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: "Trio", sans-serif; letter-spacing: .045em; position: fixed; top: 0; left: 0; right: 0; background: #fff; }
+
+.fixedbanner .margin { padding: 3.9rem 6.9rem; overflow: hidden; }
+.fixedbanner .logowrap { width: 26.8rem; height: 7.9rem; float: left; position: relative; }
+
+.fixedbanner .wordmark { display: block; width: 41.1rem; height: 7.9rem; background-image: url('images/corrado-wordmark.svg'); background-size: 41.1rem 1.6rem; background-repeat: no-repeat; background-position: center center; position: absolute; top: 0; left: 0; }
+
+.fixedbanner nav { float: right; padding: 1.4rem 0 0 0; }
+.fixedbanner ul { margin: 0; padding: 0; list-style: none; }
+.fixedbanner li { display: inline-block; }
+.fixedbanner a { color: #000; padding: 1.4rem 2.2rem 1.6rem 2.2rem; display: inline-block; }
+.fixedbanner a.button { background: #000; color: #fff; }
+
+@media screen and (max-width: 935px) {
+
+	.fixedbanner { font-size: 1.184rem; }
+	.fixedbanner .margin { padding: 1.3rem 2.9rem 1.4rem 2.9rem; }
+
+	.fixedbanner .logowrap { width: 14.7rem; height: 4.2757rem; }
+	.fixedbanner .monogram { display: block; background-image: url('images/corrado-monogram.svg'); background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; width: 4.2757rem; height: 4.2757rem; background-size: 4.2757rem 4.2757rem; }
+	.fixedbanner .wordmark { display: none; }
+	.fixedbanner nav { padding: 0; }
+
+	.fixedbanner nav { padding: 0.6rem 0 0 0; }
+	.fixedbanner a { display: none; padding: .8rem 1.1rem 1.1rem 1.1rem; }
+	.fixedbanner a.button { display: inline-block; }
+
+}
 
 
 /* Intro */

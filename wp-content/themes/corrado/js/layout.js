@@ -4,31 +4,107 @@
 
 	var scrollTimer = null;
 
-	jQuery.fn.setScrollClass = function() {
+	var fixedHeaderShowing = false;
+	var iScrollPos = 0;
 
-		if ( $(window).scrollTop() > 40 ) {
-			var isScrolled = true;
-		} else {
-			var isScrolled = false;
+
+	jQuery.fn.isScrolledPast = function () {
+
+		var wpadminbar = 0; 
+		if ($('#wpadminbar').length != 0) {
+			wpadminbar = $('#wpadminbar').outerHeight();
 		}
 
-		var hasScrolled = $(this).hasClass('scrolled');
+		var thisOffset = $(this).offset().top;
+		var windowHeight = $(window).height();
 
-		if ( hasScrolled == false ) {
-			if ( isScrolled == true ) {
-				$(this).addClass('scrolled');
-			}
-		} else if ( hasScrolled == true ) {
-			if ( isScrolled == false ) {
-				$(this).removeClass('scrolled');
-			}
+		var thisHeight = $(this).outerHeight();
+
+		var heightToThis = thisOffset;
+		var heightToEnd = heightToThis + thisHeight;
+
+		var scrollPosition = $(window).scrollTop();
+		scrollPosition = scrollPosition + wpadminbar;
+
+		if ( ( scrollPosition > heightToEnd ) ) {
+			return true;
 		}
 
 	}
 
+	function showit() {
+		console.log('Show it!');
+		if ( !fixedHeaderShowing ) {
+			console.log('Fixed header NOT showing. Show.');
+			$('.fixedbanner').fadeIn();
+			fixedHeaderShowing = true;
+		} else {
+			console.log('Fixed header IS showing. Do nothing.');
+		}
+	}
+
+	function hideit() {
+		console.log('Hide it!');
+		if ( fixedHeaderShowing ) {
+			console.log('Fixed header IS showing. Hide.');
+
+		if ( $('.bannerspacer').isScrolledPast() ) { 
+				$('.fixedbanner').fadeOut();
+			} else {
+				$('.fixedbanner').hide();
+			}
+
+			fixedHeaderShowing = false;
+		} else {
+			console.log('Fixed header NOT showing. Do nothing.');
+		}
+	}
+
+
 	function handleScroll() {
+
+		console.log("1");
+		console.log('iScrollPos ' + iScrollPos);
+
 	    scrollTimer = null;
-		$('.banner').setScrollClass();
+
+	    var iCurScrollPos = $(window).scrollTop();
+
+		if ( $('.bannerspacer').isScrolledPast() ) { 
+
+			console.log("2");
+
+		    if (iCurScrollPos > iScrollPos) {
+
+				console.log("3");
+				hideit();
+
+		    } else {
+
+				console.log("5");
+
+			    if (iCurScrollPos < iScrollPos ) { 
+
+					console.log("7");
+					showit();
+
+				} else {
+
+					console.log("7");
+
+				}
+
+		    }
+
+		} else {
+
+			console.log("8");
+			hideit();
+
+		}
+
+	    iScrollPos = iCurScrollPos;
+
 	}
 
 	$(window).scroll(function(){
