@@ -1,0 +1,161 @@
+/*
+Theme Name: Corrado
+Author: Everything Type Company
+Author URI: http://www.etc-nyc.com/
+
+Designed by Everything Type Company, http://www.etc-nyc.com/
+Developed by Spellerberg Associates, http://www.spellerbergassociates.com/
+
+*/
+
+html { font-size: 62.5%; }
+html * { outline: none; }
+
+[data-whatinput="keyboard"] a:focus, 
+	[data-whatinput="keyboard"] button:focus, 
+	[data-whatinput="keyboard"] #s:focus, 
+	[data-whatinput="keyboard"] #s2:focus { outline: auto; }
+
+
+body { background: #000; color: #fff; margin: 0; padding: 0; font-size: 3.5rem; line-height: 1.2857142857; font-family: "William Text", serif; letter-spacing: .0065em; font-style: normal; font-weight: 300; text-rendering: optimizeLegibility; }
+
+a { text-decoration: none; color: #fff; }
+
+h1 { font-size: 6rem; font-weight: 600; margin: 3.1rem 0 6.2rem 0; letter-spacing: .001em; }
+h2 { font-size: 6rem; font-weight: 600; margin: 3rem 0 6.5rem 0; letter-spacing: .001em; }
+h3 { font-size: 3.5rem; font-weight: 600; margin: 10.7rem 0 2rem 0; letter-spacing: .001em; }
+p { margin: 4.5rem 0; }
+
+strong, b { font-weight: 600; }
+
+img { max-width: 100%; }
+address { font-style: normal;}
+
+.screenreadertext { clip: rect(1px, 1px, 1px, 1px); clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px); position: absolute !important; white-space: nowrap; height: 1px; width: 1px; overflow: hidden; }
+
+@media screen and (max-width: 935px) {
+
+	body { font-size: 1.825rem; line-height: 1.5002739726; }
+	h1 { font-size: 3.5rem; line-height: 1.1428571429; margin: 3.1rem 0 2.9rem 0; }
+	h2 { font-size: 3.194rem; margin: 3rem 0 6.5rem 0; }
+	h3 { font-size: 1.825rem; margin: 6.9rem 0 2rem 0; }
+
+}
+
+
+/* Banner */
+
+.banner {background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: "Trio", sans-serif; letter-spacing: .045em; }
+
+.banner .margin { padding: 3.9rem 6.9rem; overflow: hidden; }
+.banner .logowrap { width: 26.8rem; height: 7.9rem; float: left; position: relative; }
+
+.banner .logo { width: 26.8rem; height: 7.9rem; background-image: url('images/corrado-stacked.svg'); background-size: 26.8rem 7.9rem; background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; }
+.banner .monogram { width: 7.9rem; height: 7.9rem; background-image: url('images/corrado-monogram.svg'); background-size: 7.9rem 7.9rem; background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; }
+
+.banner nav { float: right; padding: 1.4rem 0 0 0; }
+.banner ul { margin: 0; padding: 0; list-style: none; }
+.banner li { display: inline-block; }
+.banner a { color: #000; padding: 1.4rem 2.2rem 1.6rem 2.2rem; display: inline-block; }
+.banner a.button { background: #000; color: #fff; }
+
+@media screen and (max-width: 935px) {
+
+	.banner { font-size: 1.184rem; }
+	.banner .bannerspacer { padding-top: 1.6rem; }
+	.banner .margin { padding: 1.3rem 2.9rem 1.4rem 2.9rem; }
+
+	.banner .logowrap { width: 14.7rem; height: 4.2757rem; }
+	.banner .logo { width: 14.7rem; height: 4.2757rem; background-size: 14.7rem 4.2757rem; }
+	.banner .monogram { width: 4.2757rem; height: 4.2757rem; background-size: 4.2757rem 4.2757rem; }
+	.banner nav { padding: 0; }
+
+	.banner nav { padding: 0.6rem 0 0 0; }
+	.banner a { display: none; padding: .8rem 1.1rem 1.1rem 1.1rem; }
+	.banner a.button { display: inline-block; }
+
+}
+
+/* Fixed Banner */
+
+.fixedbanner { display: none; background: #fff; color: #000; font-size: 2rem; line-height: 1; letter-spacing: .003em; text-transform: uppercase; font-family: "Trio", sans-serif; letter-spacing: .045em; position: fixed; top: 0; left: 0; right: 0; background: #fff; }
+
+.fixedbanner .margin { padding: 3.9rem 6.9rem; overflow: hidden; }
+.fixedbanner .logowrap { width: 26.8rem; height: 7.9rem; float: left; position: relative; }
+
+.fixedbanner .wordmark { display: block; width: 41.1rem; height: 7.9rem; background-image: url('images/corrado-wordmark.svg'); background-size: 41.1rem 1.6rem; background-repeat: no-repeat; background-position: center center; position: absolute; top: 0; left: 0; }
+
+.fixedbanner nav { float: right; padding: 1.4rem 0 0 0; }
+.fixedbanner ul { margin: 0; padding: 0; list-style: none; }
+.fixedbanner li { display: inline-block; }
+.fixedbanner a { color: #000; padding: 1.4rem 2.2rem 1.6rem 2.2rem; display: inline-block; }
+.fixedbanner a.button { background: #000; color: #fff; }
+
+@media screen and (max-width: 935px) {
+
+	.fixedbanner { font-size: 1.184rem; }
+	.fixedbanner .margin { padding: 1.3rem 2.9rem 1.4rem 2.9rem; }
+
+	.fixedbanner .logowrap { width: 14.7rem; height: 4.2757rem; }
+	.fixedbanner .monogram { display: block; background-image: url('images/corrado-monogram.svg'); background-repeat: no-repeat; background-position: left center; position: absolute; top: 0; left: 0; width: 4.2757rem; height: 4.2757rem; background-size: 4.2757rem 4.2757rem; }
+	.fixedbanner .wordmark { display: none; }
+	.fixedbanner nav { padding: 0; }
+
+	.fixedbanner nav { padding: 0.6rem 0 0 0; }
+	.fixedbanner a { display: none; padding: .8rem 1.1rem 1.1rem 1.1rem; }
+	.fixedbanner a.button { display: inline-block; }
+
+}
+
+
+/* Intro */
+
+.intro { background: #fff; color: #000; line-height: 1.1666666667; }
+.intro .margin { max-width: 120rem; margin: auto; padding: 0 3rem 13.7rem 3rem; overflow: hidden; }
+.intro h1 { max-width: 87.5rem; }
+
+@media screen and (max-width: 935px) {
+
+	.intro .margin { padding: 12.6rem 2.9rem 7.4rem 2.9rem; }
+
+}
+
+
+
+/* Main */
+
+main { max-width: 105rem; padding: 11.7rem 4rem 0 1rem; margin: auto; box-sizing: border-box; }
+main ul { margin: 5.5rem 0 2rem 0; padding: 0 0 0 .9rem; letter-spacing: .02em; }
+main li { margin: 1.9rem 0 1.9rem 1.9rem; padding: 0 0 0 4.3rem; }
+
+@media screen and (max-width: 935px) {
+
+	main { padding: 2.6rem 2.9rem 0 2.9rem; }
+
+	main ul { margin: 3.3rem 0 2rem 0; padding: 0 0 0 1.9rem;  }
+	main li { margin: 0.05rem 0 0.05rem 0.05rem; padding: 0 0 0 1.3rem; }
+
+
+}
+
+
+/* Footer */
+
+footer { max-width: 105rem; margin: auto; padding: 30rem 0 30rem 1rem; box-sizing: border-box; }
+footer .items { overflow: hidden; }
+footer .item { width: 50%; float: left; padding: 0 0 9.2rem 0; box-sizing: border-box; }
+footer .item:nth-child(odd) { clear: both; }
+footer .item:nth-child(even) { padding-left: 7.5rem }
+
+footer h3 { text-transform: uppercase; font-size: 2rem; letter-spacing: .003em; font-family: "Trio", sans-serif; font-weight: 300; letter-spacing: .045em; margin: 1.7rem 0 3rem 0; }
+
+@media screen and (max-width: 935px) {
+
+	footer { padding: 9.4rem 2.9rem; }
+	footer .item { width: 100%; float: none; padding: 0; }
+	footer .item:nth-child(even) { padding-left: 0; }
+
+	footer h2 { margin: 3rem 0 0 0; }
+	footer h3 { font-size: 1.3rem; margin: 5.1rem 0 1.4rem 0; }
+
+}

@@ -1,3 +1,5 @@
+<?php /* Template Name: Service */  ?>
+
 <?php get_header(); ?>
 
 <?php if (have_posts()) : ?>
@@ -6,7 +8,7 @@
 
 		<h1><?php the_title(); ?></h1>
 
-		<?php the_content(); ?>
+		<?php echo get_template_part('parts/contents-whywork'); ?>
 
 	<?php endwhile; ?>
 
