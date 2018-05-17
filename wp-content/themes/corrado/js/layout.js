@@ -2,169 +2,353 @@
 
 (function($) {
 
-	var scrollTimer = null;
+	var homeResizeTimer = null;
+	var lastScrollPosition = 0;
+	var topofpage = true;
 
-	var fixedHeaderShowing = false;
-	var iScrollPos = 0;
+	var headerisabsolute = true;
+	var headerisfixed = false;
 
+	var scrollingup = false;
+	var scrollingdown = false;
 
-	jQuery.fn.isScrolledPast = function () {
+	var navisopen = false;
 
-		var wpadminbar = 0; 
-		if ($('#wpadminbar').length != 0) {
-			wpadminbar = $('#wpadminbar').outerHeight();
-		}
+	var modalScrollTop = 0;
+	var modalisopen = false;
 
-		var thisOffset = $(this).offset().top;
-		var windowHeight = $(window).height();
+	function scrollDisable() {
 
-		var thisHeight = $(this).outerHeight();
+		if ( modalisopen == false ) {
 
-		var heightToThis = thisOffset;
-		var heightToEnd = heightToThis + thisHeight;
+			if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 
-		var scrollPosition = $(window).scrollTop();
-		scrollPosition = scrollPosition + wpadminbar;
+				modalScrollTop = $('body').scrollTop();
 
-		if ( ( scrollPosition > heightToEnd ) ) {
-			return true;
-		}
+				var wpadminbar = 0;
+				if ($('#wpadminbar').length != 0) {
+					wpadminbar = $('#wpadminbar').outerHeight();
+				}
 
-	}
+				var thisOffset = modalScrollTop - wpadminbar;
+				var offsetString = "-" + thisOffset + "px";
 
-	function showit() {
-		console.log('Show it!');
-		if ( !fixedHeaderShowing ) {
-			console.log('Fixed header NOT showing. Show.');
-			$('.fixedbanner').fadeIn();
-			fixedHeaderShowing = true;
-		} else {
-			console.log('Fixed header IS showing. Do nothing.');
-		}
-	}
+				$('.scrollingcontent').css({
+				    'top': offsetString,
+				    'position':'fixed'
+				});
 
-	function hideit() {
-		console.log('Hide it!');
-		if ( fixedHeaderShowing ) {
-			console.log('Fixed header IS showing. Hide.');
-
-		if ( $('.bannerspacer').isScrolledPast() ) { 
-				$('.fixedbanner').fadeOut();
-			} else {
-				$('.fixedbanner').hide();
 			}
 
-			fixedHeaderShowing = false;
-		} else {
-			console.log('Fixed header NOT showing. Do nothing.');
+			$('body').addClass('hasmodal');
+
+			modalisopen = true;
+
 		}
+
+	}
+
+	function scrollEnable() {
+
+		if ( modalisopen == true ) {
+
+			if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+
+				$('.scrollingcontent').css({
+				    'top': "auto",
+				    'position':'static'
+				});
+
+				$( "body" ).scrollTop( modalScrollTop );
+				modalScrollTop = 0;
+
+			}
+
+			$('body').removeClass('hasmodal');
+
+			modalisopen = false;
+
+		}
+
 	}
 
 
+	function topnavOpen() {
+
+		if ( !navisopen ) {
+
+			navisopen = true;
+
+			$('.topnav').addClass('pinned');
+			$('.topnav .shade').addClass('open');
+			scrollDisable();
+
+		}
+
+	}
+
+	function topnavClose() {
+
+		if ( navisopen ) {
+
+			navisopen = false;
+
+			$('.topnav .shade').removeClass('open');
+
+			scrollDisable();
+
+			var dofade = true;
+
+			$('.topnav .shade').one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(event) {
+					if ( dofade ) {
+						$('.topnav').removeClass('pinned');
+						dofade = false;
+					}
+			});
+
+			scrollEnable();
+
+		}
+
+	}
+
+	function handleResize() {
+		setupHeights();
+		handleScroll();
+	}
+
 	function handleScroll() {
+		pinheader();
+		pinfooter();
+	}
 
-		console.log("1");
-		console.log('iScrollPos ' + iScrollPos);
 
-	    scrollTimer = null;
+	function headerSetToMidPage() {
 
-	    var iCurScrollPos = $(window).scrollTop();
+		// console.log('mid page');
 
-		if ( $('.bannerspacer').isScrolledPast() ) { 
+		$('header').addClass('pinned');
+		$('header').addClass('hidden');
 
-			console.log("2");
+		contactButtonShow();
 
-		    if (iCurScrollPos > iScrollPos) {
+	}
 
-				console.log("3");
-				hideit();
+	function headerSetToPageTop() {
 
-		    } else {
+		// console.log('page top');
 
-				console.log("5");
+		scrollingup = false;
+		scrollingdown = false;
 
-			    if (iCurScrollPos < iScrollPos ) { 
+		$('header').removeClass('hidden');
+		$('header').removeClass('pinned');
 
-					console.log("7");
-					showit();
+		contactButtonHide();
+
+	}
+
+	function headerFadeOut() {
+
+		$('header .inner').removeClass('visible')
+
+		$('header .inner').one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(event) {
+			if ( scrollingdown ) {
+
+				$('header').addClass('hidden');
+
+			}
+
+		});
+
+	}
+
+	function headerFadeIn() {
+
+			$('header').removeClass('hidden')
+			$('header .inner').addClass("visible");
+
+	}
+
+
+	function contactButtonHide() {
+
+		// console.log('hide');
+
+		$('.contactbutton a').removeClass('visible')
+
+		var dofade = true;
+
+		$('.contactbutton a').one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(event) {
+			if ( dofade ) {
+
+				$('.contactbutton').addClass('hidden');
+				dofade = false;
+			}
+
+		});
+
+	}
+
+	function contactButtonShow() {
+
+			// console.log('show');
+
+			$('.contactbutton').removeClass('hidden')
+			$('.contactbutton a').addClass("visible");
+
+	}
+
+	function pinheader() {
+
+		var scrollPosition = $(window).scrollTop();
+
+		if ( topofpage ) {
+
+			var windowHeight = window.innerHeight;
+
+			if ( scrollPosition < windowHeight ) {
+
+			} else {
+
+				topofpage = false;
+				headerSetToMidPage();
+
+			}
+
+		} else {
+
+			if ( scrollPosition > 20 ) {
+
+				if ( scrollPosition >= lastScrollPosition ) {
+
+						if ( !scrollingdown ) {
+
+							scrollingup = false;
+							scrollingdown = true;
+
+							headerFadeOut();
+
+						} else {
+
+						}
+
 
 				} else {
 
-					console.log("7");
+					if ( !scrollingup ) {
+
+						scrollingdown = false;
+						scrollingup = true;
+
+						headerFadeIn();
+
+					} else {
+
+
+					}
 
 				}
 
-		    }
+				lastScrollPosition = scrollPosition;
 
-		} else {
+			} else {
 
-			console.log("8");
-			hideit();
+				topofpage = true;
+				headerSetToPageTop();
+
+			}
 
 		}
 
-	    iScrollPos = iCurScrollPos;
+	}
+
+	function pinfooter() {
+
+		var pagebodyHeight = $('.pagebody').outerHeight();
+		var footerHeight = $('footer').outerHeight();
+		var windowHeight = window.innerHeight;
+
+		var adjustedPagebodyHeight = pagebodyHeight + footerHeight - windowHeight;
+
+		var scrollPosition = $(window).scrollTop() + 1;
+
+		if ( scrollPosition >= adjustedPagebodyHeight ) {
+			$('.sitefooter').addClass('pinned');
+		} else {
+			$('.sitefooter').removeClass('pinned');
+		}
 
 	}
 
-	$(window).scroll(function(){
-		// Resize actions are in handleScroll()
+	function setupHeights() {
 
-	    if (scrollTimer) {
-	        clearTimeout(scrollTimer);   // clear any previous pending timer
-	    }
-	    scrollTimer = setTimeout(handleScroll, 1);   // set new timer
+		var sitefooter = 0;
+		if ($('.sitefooter').length != 0) {
+			sitefooter = $('.sitefooter').outerHeight();
+		}
 
-	});
+		$('.pagebody').css({'margin-bottom': sitefooter + 'px'});
+
+		var tipswrap = 0;
+		if ($('.tipswrap').length != 0) {
+			tipswrap = $('.tipswrap').outerHeight();
+		}
+
+		var negativemargin = sitefooter + tipswrap;
+
+		$('.sitefooter').css({'margin-top': '-' + negativemargin + 'px'});
+
+	}
 
 	$(document).ready( function() {
 
-		// Smooth Scrolling
-		$('a[href*="#"]')
-		  // Remove links that don't actually link to anything
-		  .not('[href="#"]')
-		  .not('[href="#0"]')
-		  .click(function(event) {
-		
-		    // On-page links
-		    if (
-		      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-		      && 
-		      location.hostname == this.hostname
-		    ) {
-		      // Figure out element to scroll to
-		      var target = $(this.hash);
-		      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-		      // Does a scroll target exist?
-		      if (target.length) {
-		        // Only prevent default if animation is actually gonna happen
-		        event.preventDefault();
-		        $('html, body').animate({
-		          scrollTop: target.offset().top
-		        }, 500, function() {
-		          // Callback after animation
-		          // Must change focus!
-		          var $target = $(target);
-		          $target.focus();
-		          if ($target.is(":focus")) { // Checking if the target was focused
-		            return false;
-		          } else {
-		            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-		            $target.focus(); // Set focus again
-		          };
-		        });
-		      }
-		    }
-		  });
+		handleResize();
+
+		$( ".menubutton" ).click(function() {
+		  topnavOpen();
+		});
+
+		$( ".closebutton" ).click(function() {
+		  topnavClose();
+		});
+
+		$( ".tapout" ).click(function() {
+		  topnavClose();
+		});
+
+		$( ".ourservices .service button" ).click(function() {
+				$(this).parents('.service').find('.fold').slideToggle(300, function() {
+					$(this).parents('.service').toggleClass('open');
+  			});
+
+		});
+
+		$('.carousel').flickity({
+			wrapAround: true
+		});
+
+
 
 	});
 
-})(jQuery);
+	$(window).load( function() {
 
-/**
- * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
- * @version v4.1.3
- * @link https://github.com/ten1seven/what-input
- * @license MIT
- */
-!function(b,c){"object"==typeof exports&&"object"==typeof module?module.exports=c():"function"==typeof define&&define.amd?define("whatInput",[],c):"object"==typeof exports?exports.whatInput=c():b.whatInput=c()}(this,function(){return function(a){function c(d){if(b[d])return b[d].exports;var e=b[d]={exports:{},id:d,loaded:!1};return a[d].call(e.exports,e,e.exports,c),e.loaded=!0,e.exports}var b={};return c.m=a,c.c=b,c.p="",c(0)}([function(a,b){"use strict";a.exports=function(){var a=document.documentElement,b="initial",c=null,d=["input","select","textarea"],e=[16,17,18,91,93],f={keydown:"keyboard",mousedown:"mouse",mousemove:"mouse",MSPointerDown:"pointer",MSPointerMove:"pointer",pointerdown:"pointer",pointermove:"pointer",touchstart:"touch"},g=[],h=!1,i=!1,j={x:null,y:null},k={2:"touch",3:"touch",4:"mouse"},l=function(){f[s()]="mouse",m(),o()},m=function(){window.PointerEvent?(a.addEventListener("pointerdown",n),a.addEventListener("pointermove",p)):window.MSPointerEvent?(a.addEventListener("MSPointerDown",n),a.addEventListener("MSPointerMove",p)):(a.addEventListener("mousedown",n),a.addEventListener("mousemove",p),"ontouchstart"in window&&(a.addEventListener("touchstart",q),a.addEventListener("touchend",q))),a.addEventListener(s(),p),a.addEventListener("keydown",n)},n=function(g){if(!h){var i=g.which,j=f[g.type];if("pointer"===j&&(j=r(g)),b!==j||c!==j){var k=document.activeElement,l=!1;k&&k.nodeName&&-1===d.indexOf(k.nodeName.toLowerCase())&&(l=!0),("touch"===j||"mouse"===j||"keyboard"===j&&l&&-1===e.indexOf(i))&&(b=c=j,o())}}},o=function(){a.setAttribute("data-whatinput",b),a.setAttribute("data-whatintent",b),-1===g.indexOf(b)&&(g.push(b),a.className+=" whatinput-types-"+b)},p=function(d){if(j.x!==d.screenX||j.y!==d.screenY?(i=!1,j.x=d.screenX,j.y=d.screenY):i=!0,!h&&!i){var e=f[d.type];"pointer"===e&&(e=r(d)),c!==e&&(c=e,a.setAttribute("data-whatintent",c))}},q=function(b){"touchstart"===b.type?(h=!1,n(b)):h=!0},r=function(b){return"number"==typeof b.pointerType?k[b.pointerType]:"pen"===b.pointerType?"touch":b.pointerType},s=function(){return"onwheel"in document.createElement("div")?"wheel":void 0!==document.onmousewheel?"mousewheel":"DOMMouseScroll"};return"addEventListener"in window&&Array.prototype.indexOf&&l(),{ask:function(d){return"loose"===d?c:b},types:function(){return g}}}()}])});
+		handleResize();
+
+	});
+
+	$(window).resize( function() {
+
+	    if (homeResizeTimer) {
+	        clearTimeout(homeResizeTimer);   // clear any previous pending timer
+	    }
+	    homeResizeTimer = setTimeout(handleResize, 1);   // set new timer
+
+	});
+
+	$(window).scroll( function() {
+		handleScroll();
+	});
+
+})(jQuery);

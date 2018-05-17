@@ -2,46 +2,62 @@
 
 <?php get_header(); ?>
 
+<?php if (have_posts()) : ?>
 
-<h1>We are the Corrado Financial Group.</h1>
+	<?php while (have_posts()) : the_post(); ?>
 
-<p>We help our clients plan and chart
-their financial futures—so they can live
-more fully in the present.</p>
+		<div class="homepage">
 
-<p>We began as an accounting firm.
-In the two decades since, we’ve come
-to understand that many of our clients
-needed more than someone to file
-their tax returns—they needed advisors
-who understand the full scope of their
-financial lives.</p>
+			<h1>We are the <br />Corrado Financial Group.</h1>
 
-<p>They needed guidance on their investment
-portfolio, help with planning for
-retirement, direction on writing their
-wills, their pre-nups, their insurances.</p>
+			<div class="homeintro">
 
-<p>We’ve found that our relationships-first
-approach to financial planning gives
-our clients the freedom to realize their
-best selves. We help our clients plan
-for their financial future—so that they
-can live more fully in the present.</p>
+				<div class="tempimage"></div>
 
-<?php
+				<p>We help our clients plan and chart
+				their financial futures—so they can live
+				more fully in the present.</p>
 
-$args = array(
-	'post_type' => 'page',
-	'name' => 'why-work-with-us',
-);
+				<div class="homegrey">
 
-$the_query = new WP_Query($args); ?>
-<?php if ( $the_query->have_posts() ) : ?>
-	<?php while( $the_query->have_posts() ): $the_query->the_post(); ?>
-	<?php echo get_template_part('parts/contents-whywork'); ?>
-	<?php endwhile; ?>
+					<p>We began as an accounting firm.
+					In the two decades since, we’ve come
+					to understand that many of our clients
+					needed more than someone to file
+					their tax returns—they needed advisors
+					who understand the full scope of their
+					financial lives.</p>
+
+					<div class="tempimage"></div>
+
+					<p>They needed guidance on their investment
+					portfolio, help with planning for
+					retirement, direction on writing their
+					wills, their pre-nups, their insurances.</p>
+
+					<div class="tempimage"></div>
+
+					<p>We’ve found that our relationships-first
+					approach to financial planning gives
+					our clients the freedom to realize their
+					best selves. We help our clients plan
+					for their financial future—so that they
+					can live more fully in the present.</p>
+
+					<div class="tempimage"></div>
+
+					<div class="bodybutton"><a href="/why-work-with-us/">Why Work With Us</a></div>
+
+				</div>
+
+			</div>
+
+			<?php echo get_template_part('parts/contactinclude'); ?>
+
+		</div>
+
+<?php endwhile; ?>
+
 <?php endif; ?>
-<?php wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>

@@ -19,6 +19,11 @@ function enqueue_scripts_method() {
 	$layoutjs = get_template_directory_uri() . '/js/layout.js';
 	wp_register_script('layoutjs',$layoutjs, false, $version);
 
+	$fadesjs = get_template_directory_uri() . '/js/fades.js';
+	wp_register_script('fadesjs',$fadesjs, false, $version);
+
+	$flickityjs = get_template_directory_uri() . '/js/flickity.pkgd.min.js';
+	wp_register_script('flickityjs',$flickityjs, false, $version);
 
 	// Define CSS
 
@@ -35,7 +40,9 @@ function enqueue_scripts_method() {
 
 	if(!wp_script_is('jquery')) wp_enqueue_script("jquery");
 
-	wp_enqueue_script( 'layoutjs',array('jquery'));
+	wp_enqueue_script( 'flickityjs');
+	wp_enqueue_script( 'layoutjs',array('jquery','flickityjs'));
+	wp_enqueue_script( 'fadesjs',array('jquery'));
 
 	wp_enqueue_style( 'typothequecss');
 	wp_enqueue_style( 'fontscss');
