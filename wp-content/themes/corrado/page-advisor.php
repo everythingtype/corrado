@@ -6,7 +6,8 @@
 
 	<?php while (have_posts()) : the_post(); ?>
 
-		<div class="advisor">
+		<div class="advisorbio">
+		<div class="biopadding">
 
 			<?php $name = get_field('name'); ?>
 			<?php if ( $name && $name != '' ) : ?>
@@ -20,12 +21,12 @@
 
 			<?php $photo = get_field('photo'); ?>
 			<?php if ( $photo && $photo != '' ) : ?>
-				<?php echo spellerberg_get_image($photo) ?>
+				<div class="bioimage"><?php echo spellerberg_get_image($photo); ?></div>
 			<?php endif; ?>
 
 			<?php $email = get_field('email'); ?>
 			<?php if ( $email && $email != '' ) : ?>
-				<p>Contact:<br />
+				<p class="email"><em>Contact:</em><br />
 				<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
 			<?php endif; ?>
 
@@ -34,6 +35,7 @@
 				<?php echo wpautop($bio); ?>
 			<?php endif; ?>
 
+		</div>
 		</div>
 
 	<?php endwhile; ?>

@@ -1,16 +1,11 @@
-<?php /* Template Name: Client Forms */  ?>
-
 <?php get_header(); ?>
 
-<?php if (have_posts()) : ?>
-
-	<?php while (have_posts()) : the_post(); ?>
-
-		<h1><?php the_title(); ?></h1>
-
-
-	<?php endwhile; ?>
-
-<?php endif; ?>
+	<div class="notfound">
+		<div class="padding">
+			<h1>404</h1>
+			<p>The page you are looking for does not exist.</p>
+			<figure><div class="tempimage"></div></figure>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

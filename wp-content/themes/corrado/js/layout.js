@@ -113,6 +113,7 @@
 	}
 
 	function handleResize() {
+		$('.carousel').flickity('resize');
 		setupHeights();
 		handleScroll();
 	}
@@ -303,8 +304,6 @@
 
 	$(document).ready( function() {
 
-		handleResize();
-
 		$( ".menubutton" ).click(function() {
 		  topnavOpen();
 		});
@@ -325,10 +324,11 @@
 		});
 
 		$('.carousel').flickity({
-			wrapAround: true
+			wrapAround: true,
+			arrowShape: 'M70.97 100 74.18 97.11 31.64 50 74.18 2.89 70.97 0 25.82 50 70.97 100'
 		});
 
-
+		handleResize();
 
 	});
 

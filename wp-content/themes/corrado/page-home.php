@@ -28,14 +28,14 @@
 					who understand the full scope of their
 					financial lives.</p>
 
-					<div class="tempimage"></div>
+					<div class="tempimage homeimage"></div>
 
 					<p>They needed guidance on their investment
 					portfolio, help with planning for
 					retirement, direction on writing their
 					wills, their pre-nups, their insurances.</p>
 
-					<div class="tempimage"></div>
+					<div class="tempimage homeimage"></div>
 
 					<p>We’ve found that our relationships-first
 					approach to financial planning gives
@@ -44,7 +44,7 @@
 					for their financial future—so that they
 					can live more fully in the present.</p>
 
-					<div class="tempimage"></div>
+					<div class="tempimage homeimage last"></div>
 
 					<div class="bodybutton"><a href="/why-work-with-us/">Why Work With Us</a></div>
 

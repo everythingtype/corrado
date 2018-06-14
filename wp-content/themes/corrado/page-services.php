@@ -10,16 +10,19 @@
 
 			<h1><?php the_title(); ?></h1>
 
+			<div class="introimage">
 			<?php $intro_image = get_sub_field('intro_image'); ?>
 			<?php if ( $intro_image && $intro_image != '' ) : ?>
 				<?php echo spellerberg_get_image($intro_image) ?>
 			<?php else : ?>
 					<div class="tempimage"></div>
 			<?php endif; ?>
+			</div>
+
 
 			<?php $intro = get_field('intro'); ?>
 			<?php if ( $intro && $intro != '' ) : ?>
-				<?php echo wpautop($intro); ?>
+				<div class="serviceintro"><?php echo wpautop($intro); ?></div>
 			<?php endif; ?>
 
 			<?php if( have_rows('services') ): ?>
@@ -44,7 +47,7 @@
 							<?php if ( $service_image && $service_image != '' ) : ?>
 								<?php echo spellerberg_get_image($service_image) ?>
 							<?php else : ?>
-									<div class="tempimage"></div>
+									<div class="tempimage foldimage"></div>
 							<?php endif; ?>
 
 							<?php $service_description = get_sub_field('service_description'); ?>

@@ -13,13 +13,17 @@
           <span class="screen-reader-text">Close</span>
       	</button>
 
-      	<div class="top-main">
-      		<?php wp_nav_menu( array('theme_location'  => 'top-main' ) ); ?>
-      	</div>
+        <div class="navpadding">
 
-      	<div class="top-sub">
-      		<?php wp_nav_menu( array('theme_location'  => 'top-sub' ) ); ?>
-      	</div>
+        	<div class="top-main">
+        		<?php wp_nav_menu( array('theme_location'  => 'top-main' ) ); ?>
+        	</div>
+
+        	<div class="top-sub">
+        		<?php wp_nav_menu( array('theme_location'  => 'top-sub' ) ); ?>
+        	</div>
+
+        </div>
 
       </div>
 

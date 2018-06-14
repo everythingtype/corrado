@@ -6,13 +6,14 @@
 
 	<?php echo get_template_part('parts/tips'); ?>
 
+	<div class="footerwrap">
 	<footer>
 
-			<div class="column">
+			<div class="column logocolumn">
 				<?php echo get_template_part('images/corrado-monogram'); ?>
 			</div>
 
-			<div class="column">
+			<div class="column addresscolumn">
 
 				<h3>NY Office</h3>
 
@@ -23,7 +24,7 @@
 
 			</div>
 
-			<div class="column">
+			<div class="column addresscolumn">
 
 				<h3>NJ Office</h3>
 
@@ -34,7 +35,7 @@
 
 			</div>
 
-			<div class="column">
+			<div class="column copyrightcolumn">
 
 				<p>&copy; <?php echo current_time( 'Y' ); ?> Corrado Financial Group.<br />
 				All Rights Reserved.<br />
@@ -45,6 +46,7 @@
 			</div>
 
 	</footer>
+	</div>
 
 </div>
 
