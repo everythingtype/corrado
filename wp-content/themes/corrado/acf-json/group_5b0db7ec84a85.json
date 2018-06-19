@@ -22,6 +22,25 @@
             "button_label": "Add Link",
             "sub_fields": [
                 {
+                    "key": "field_5b23f0d1676f4",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5b0db814f1f13",
                     "label": "Label",
                     "name": "label",
@@ -170,5 +189,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527635287
+    "modified": 1529082077
 }

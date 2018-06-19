@@ -15,14 +15,17 @@
 						<?php while ( have_rows('links') ) : the_row(); ?>
 							<div class="link">
 
-								<?php $label = get_sub_field('label'); ?>
-								<?php if ( $label && $label != '' ) : ?>
-									<h2><?php echo $label; ?></h2>
+								<?php $heading = get_sub_field('heading'); ?>
+								<?php if ( $heading && $heading != '' ) : ?>
+									<h2><?php echo $heading; ?></h2>
 								<?php endif; ?>
 
-								<?php $link = get_sub_field('link', false, false); ?>
+								<?php
+									$link = get_sub_field('link', false, false);
+									$label = get_sub_field('label');
+								?>
 								<?php if ( $link && $link != '' ) : ?>
-									<p><a href="<?php echo get_the_permalink($link); ?>"><?php echo get_the_title($link); ?></a></p>
+									<p><a href="<?php echo get_the_permalink($link); ?>"><?php echo $label; ?></a></p>
 								<?php endif; ?>
 
 							</div>
