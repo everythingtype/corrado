@@ -1,6 +1,6 @@
 (function($) {
 
-  var ajaxEnabled = true;
+  var ajaxEnabled = false;
 
   function populatelightbox(html) {
     $('#ajaxtarget').html( html );
