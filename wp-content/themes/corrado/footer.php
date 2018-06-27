@@ -50,7 +50,9 @@
 
 </div>
 
+
 <?php get_template_part('parts/topnav'); ?>
+<?php get_template_part('parts/lightbox'); ?>
 
 <div class="blackbackground"></div>
 

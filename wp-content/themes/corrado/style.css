@@ -754,3 +754,15 @@ footer abbr { font-size: 1.1rem; }
 	.flickity-prev-next-button { display: none; }
 
 }
+
+
+/* Lightbox */
+
+#lightbox { display: none; }
+#lightbox.open { display: block; top: 0; right: 0; bottom: 0; left: 0; position: fixed; z-index: 100; }
+
+#lightbox button { border: none; background: transparent; position: absolute; top: 5.2rem; right: 6.2rem; margin: 0; padding: 0; }
+#lightbox button .closeicon { display: block; line-height: 0; width: 2.4rem; }
+
+#lightbox .lightboxinner { background: #fff; opacity: 0; transition: opacity 0.25s ease; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+#lightbox.open .lightboxinner { opacity: 1; }

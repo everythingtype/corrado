@@ -62,5 +62,3 @@ function enqueue_scripts_method() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts_method');
-
-?>
