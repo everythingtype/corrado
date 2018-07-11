@@ -456,6 +456,7 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 .contactus .location .map { width: calc(50% - .7rem); float: right; position: relative; margin-top: .3rem; }
 .contactus .location .map .ratio { padding-top: 100%; }
 .contactus .location .map .inner { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #ccc; }
+.contactus .location .map img { background: transparent; }
 
 @media screen and (max-width: 600px) {
 

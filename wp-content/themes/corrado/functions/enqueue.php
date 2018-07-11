@@ -22,7 +22,7 @@ function enqueue_scripts_method() {
 	$fadesjs = get_template_directory_uri() . '/js/fades.js';
 	wp_register_script('fadesjs',$fadesjs, false, $version);
 
-	$googlemapsjs = 'https://maps.googleapis.com/maps/api/js';
+	$googlemapsjs = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC8teDzhlJqlbwAjvI3ri82kPpXXBiKXrM';
 	wp_register_script('googlemapsjs',$googlemapsjs, false);
 
 	$mapjs = get_template_directory_uri() . '/js/map.js';
