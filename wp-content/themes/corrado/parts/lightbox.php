@@ -1,13 +1,14 @@
 <div id="lightbox">
   <div class="lightboxinner">
-  <div class="lightscrollable">
+  <div class="lightboxscrollable">
 
-  <button class="closebutton">
+  <button class="closebutton" data-path="<?php the_permalink(); ?>">
     <span class="closeicon"><?php echo get_template_part('images/close'); ?></span>
     <span class="screen-reader-text">Close</span>
   </button>
 
-  <div id="ajaxtarget">yo!</div>
+  <div class="headerspacer"></div>
+  <div id="ajaxtarget"></div>
 
   </div>
   </div>

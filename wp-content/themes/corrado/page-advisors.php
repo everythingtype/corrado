@@ -28,7 +28,7 @@
 
 				<?php while( $the_query->have_posts() ): $the_query->the_post(); ?>
 
-					<div class="advisor"><a href="<?php the_permalink(); ?>">
+					<div class="advisor"><a href="<?php the_permalink(); ?>" class="ajaxlink" data-postid="<?php echo $post->ID; ?>">
 
 						<div class="portrait">
 							<div class="ratio"></div>

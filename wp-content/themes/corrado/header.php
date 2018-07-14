@@ -26,9 +26,13 @@
 	if ( is_page_template('page-whywork.php') ) $color = 'black';
 	if ( is_subpage_of('advisors') ) $color = 'gray';
 //	$color = 'black';
+
+	$lightboxcolor = 'whitelightbox';
+	if ( is_page_template('page-advisors.php') ) $lightboxcolor = 'graylightbox';
+
 ?>
 
-<body class="<?php echo $color; ?>">
+<body class="<?php echo $color; ?> <?php echo $lightboxcolor; ?>">
 
 <header>
 	<div class="inner visible">

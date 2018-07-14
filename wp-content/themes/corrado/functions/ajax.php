@@ -34,7 +34,8 @@ add_action( 'wp_ajax_ajax_action', 'populate_ajax' );
 function populate_ajax() {
 
   $postid = $_POST['postid'];
-  $posttype = $_POST['posttype'];
+
+	$posttype = get_post_type($postid);
 
   if ( $posttype == 'page' ) :
     $args = array(
@@ -49,14 +50,15 @@ function populate_ajax() {
   $posts = new WP_Query( $args );
   $GLOBALS['wp_query'] = $posts;
 
-  if( ! $posts->have_posts() ) :
-    // get_template_part( 'content', 'none' );
-    // error!
-  else :
+  if( $posts->have_posts() ) :
     while ( $posts->have_posts() ) :
       $posts->the_post();
-      // get_template_part( 'content', get_post_format() );
-      echo get_the_title();
+
+				$templateslug = get_page_template_slug();
+
+				if ( $templateslug == 'page-form.php' ) get_template_part('parts/layout-form');
+				if ( $templateslug == 'page-advisor.php' ) get_template_part('parts/layout-advisor');
+
     endwhile;
   endif;
 

@@ -25,7 +25,7 @@
 									$label = get_sub_field('label');
 								?>
 								<?php if ( $link && $link != '' ) : ?>
-									<p><a href="<?php echo get_the_permalink($link); ?>" class="ajaxlink" data-postid="<?php echo $link; ?>" data-posttype="<?php echo get_post_type($link); ?>"><?php echo $label; ?></a></p>
+									<p><a href="<?php echo get_the_permalink($link); ?>" class="ajaxlink" data-postid="<?php echo $link; ?>"><?php echo $label; ?></a></p>
 								<?php endif; ?>
 
 							</div>
