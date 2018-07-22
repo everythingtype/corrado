@@ -60,11 +60,6 @@
 
 	}
 
-  function populatelightbox(html) {
-    $('#ajaxtarget').html( html );
-    openlightbox();
-  }
-
   function openlightbox() {
     $('#lightbox').addClass('open');
     $('#lightbox .lightboxinner').addClass('visible');
@@ -112,9 +107,6 @@
 		});
 
 
-
-
-
     $( ".ajaxlink" ).click(function() {
 
       if ( ajaxEnabled ) {
@@ -125,6 +117,10 @@
         var postid = $(this).data("postid");
         var posttype = $(this).data("posttype");
 
+        $('#lightbox').addClass('empty');
+        $('#ajaxtarget').html('');
+        openlightbox();
+
         $.ajax({
           url: ajaxloading.ajaxurl,
           type: 'post',
@@ -133,7 +129,9 @@
     				postid: postid
           },
           success: function( html ) {
-    				populatelightbox(html);
+
+            $('#lightbox').removeClass('empty');
+            $('#ajaxtarget').html( html );
 
       			window.history.replaceState("", "", thispath );
 

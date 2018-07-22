@@ -765,11 +765,13 @@ footer abbr { font-size: 1.1rem; }
 #lightbox button { border: none; background: transparent; position: absolute; top: 5.2rem; right: 6.2rem; margin: 0; padding: 0; }
 #lightbox button .closeicon { display: block; line-height: 0; width: 2.4rem; }
 
+#lightbox.empty .lightboxinner { background-image: url('images/loading.gif'); background-repeat: no-repeat; background-position: center center; }
+
 #lightbox .lightboxinner { opacity: 0; transition: opacity 0.25s ease; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
 #lightbox .lightboxinner.visible { opacity: 1; }
 
-.whitelightbox .lightboxinner { color: #000; background: #fff; }
-.graylightbox .lightboxinner { color: #000; background: #e5e5e5; }
-.blacklightbox .lightboxinner { color: #fff; background: #000; }
+.whitelightbox .lightboxinner { color: #000; background-color: #fff; }
+.graylightbox .lightboxinner { color: #000; background-color: #e5e5e5; }
+.blacklightbox .lightboxinner { color: #fff; background-color: #000; }
 
 #lightbox .lightboxinner .lightboxscrollable { height: 100%; overflow: auto; position: relative; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
