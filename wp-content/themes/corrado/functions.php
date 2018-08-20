@@ -9,10 +9,11 @@ require_once( 'functions/menus.php' );
 require_once( 'functions/spellerberg_wpsrcset.php' );
 
 
-function theme_slug_setup() {
+function theme_support_setup() {
    add_theme_support( 'title-tag' );
+   add_theme_support( 'html5', array( 'search-form' ) );
 }
-add_action( 'after_setup_theme', 'theme_slug_setup' );
+add_action( 'after_setup_theme', 'theme_support_setup' );
 
 
 function is_subpage_of($slug) {
@@ -41,3 +42,12 @@ function get_ID_by_slug($page_slug) {
 	return $page_id;
 
 }
+
+
+function wpb_change_search_url() {
+    if ( is_search() && ! empty( $_GET['s'] ) ) {
+        wp_redirect( home_url( "/search/" ) . urlencode( get_query_var( 's' ) ) );
+        exit();
+    }
+}
+add_action( 'template_redirect', 'wpb_change_search_url' );
