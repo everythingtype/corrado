@@ -18,6 +18,8 @@
 				$args = array(
 					'post_type' => 'page',
 					'post_parent' => $thisid,
+					'order' => 'ASC',
+					'orderby' => 'menu_order',
 				);
 
 				$the_query = new WP_Query($args);
