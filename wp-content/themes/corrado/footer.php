@@ -4,7 +4,7 @@
 
 <div class="sitefooter">
 
-	<?php echo get_template_part('parts/tips'); ?>
+	<?php //echo get_template_part('parts/tips'); ?>
 
 	<div class="footerwrap">
 	<footer>
