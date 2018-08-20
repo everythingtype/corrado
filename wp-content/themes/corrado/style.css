@@ -348,6 +348,7 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 .black .advisors a { color: #fff; }
 
 .advisors h2 { font-size: 2rem; margin: 2rem 0 0 0; line-height: 1; font-family: "William Text", serif; letter-spacing: .002em; }
+.advisors h2 abbr { font-family: "William Text 2", serif; }
 .advisors p { margin: .4rem 0 0 0; }
 
 @media screen and (max-width: 1000px) {
