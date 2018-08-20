@@ -39,7 +39,7 @@
 
 				<p>&copy; <?php echo current_time( 'Y' ); ?> Corrado Financial Group.<br />
 				All Rights Reserved.<br />
-				<a class="underlined" href="/privacy-policy-disclaimer/">Privacy Policy Disclaimer</a>.</p>
+				<a class="underlined" href="/privacy-policy/">Privacy Policy</a> &nbsp; <a class="underlined" href="/disclosure/">Disclosure</p>
 
 				<p><a href="http://etc-nyc.com" target="_blank">Site by ETC</a></p>
 
