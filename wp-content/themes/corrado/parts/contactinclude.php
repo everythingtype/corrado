@@ -2,11 +2,7 @@
 
   <h2>Contact Us</h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetuer
-  adipiscing elit, sed diam nonummy nibh
-  euismod tincidunt ut laoreet dolore magna
-  aliquam erat volutpat. Ut wisi enim minim
-  veniam, quis nostrud exerci tation.</p>
+  <p>Interested in learning more about our services? Speak with a financial advisor to see if we’re a good fit for you.</p>
 
   <div class="bodybutton"><a href="/contact-us/">Learn more</a></div>
 
