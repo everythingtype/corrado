@@ -36,6 +36,9 @@ function enqueue_scripts_method() {
 	$typothequecss = 'https://fonts.typotheque.com/WF-030602-010148.css';
 	wp_register_style('typothequecss',$typothequecss, false);
 
+	$typotheque2css = 'https://fonts.typotheque.com/WF-030602-010410.css'; // Small Caps
+	wp_register_style('typotheque2css',$typotheque2css, false);
+
 	$fontscss = get_stylesheet_directory_uri() . '/fonts/fonts.css';
 	wp_register_style('fontscss',$fontscss, false, $version);
 
@@ -51,6 +54,7 @@ function enqueue_scripts_method() {
 	wp_enqueue_script( 'fadesjs',array('jquery'));
 
 	wp_enqueue_style( 'typothequecss');
+	wp_enqueue_style( 'typotheque2css'); // Small Caps
 	wp_enqueue_style( 'fontscss');
 	wp_enqueue_style( 'themecss');
 
