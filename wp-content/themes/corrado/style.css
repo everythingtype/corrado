@@ -391,6 +391,26 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 
 }
 
+
+/* Default Page */
+
+.pagetemplate { max-width: 112rem; margin: auto; line-height: 1.4; }
+.pagepadding { margin: 0 4rem 23rem 4rem; }
+
+
+.pagetemplate a { color: #000; border-bottom: 1px solid #989898; }
+.black .pagetemplate a { color: #fff; border-color: #fff; }
+
+.pagetemplate p { margin: 3.5rem 0; }
+
+@media screen and (max-width: 600px) {
+
+	.pagepadding { margin: 0 2rem 23rem 2rem; }
+
+	.pagetemplate p { margin: 2.5rem 0; }
+
+}
+
 /* Client Forms */
 
 .clientforms { max-width: 112rem; margin: auto; line-height: 1.4; letter-spacing: 0; padding-bottom: 12rem; }
