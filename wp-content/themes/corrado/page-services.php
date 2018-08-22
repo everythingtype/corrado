@@ -11,12 +11,7 @@
 			<h1><?php the_title(); ?></h1>
 
 			<div class="introimage">
-			<?php $intro_image = get_sub_field('intro_image'); ?>
-			<?php if ( $intro_image && $intro_image != '' ) : ?>
-				<?php echo spellerberg_get_image($intro_image) ?>
-			<?php else : ?>
-					<div class="tempimage"></div>
-			<?php endif; ?>
+				<figure class="svgimage services"><?php echo get_template_part('images/svg/services.svg'); ?></figure>
 			</div>
 
 
@@ -44,10 +39,18 @@
 						<div class="fold"><div class="foldinner">
 
 							<?php $service_image = get_sub_field('service_image'); ?>
-							<?php if ( $service_image && $service_image != '' ) : ?>
-								<?php echo spellerberg_get_image($service_image) ?>
-							<?php else : ?>
-									<div class="tempimage foldimage"></div>
+							<?php if ( $service_image == 'wealth' ) : ?>
+								<figure class="svgimage services-wealth"><?php echo get_template_part('images/svg/services-wealth.svg'); ?></figure>
+							<?php elseif ( $service_image == 'tax' ) : ?>
+								<figure class="svgimage services-tax"><?php echo get_template_part('images/svg/services-tax.svg'); ?></figure>
+							<?php elseif ( $service_image == 'retirement' ) : ?>
+								<figure class="svgimage services-retirement"><?php echo get_template_part('images/svg/services-retirement.svg'); ?></figure>
+							<?php elseif ( $service_image == 'family' ) : ?>
+								<figure class="svgimage services-family"><?php echo get_template_part('images/svg/services-family.svg'); ?></figure>
+							<?php elseif ( $service_image == 'insurance' ) : ?>
+								<figure class="svgimage services-insurance"><?php echo get_template_part('images/svg/services-insurance.svg'); ?></figure>
+							<?php elseif ( $service_image == 'business' ) : ?>
+								<figure class="svgimage services-business"><?php echo get_template_part('images/svg/services-business.svg'); ?></figure>
 							<?php endif; ?>
 
 							<?php $service_description = get_sub_field('service_description'); ?>

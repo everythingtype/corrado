@@ -3,30 +3,6 @@
     "title": "Our Services",
     "fields": [
         {
-            "key": "field_5ae7c0b5754c6",
-            "label": "Intro Image",
-            "name": "intro_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5ae7ae30caf22",
             "label": "Intro Text",
             "name": "intro",
@@ -125,7 +101,7 @@
                     "key": "field_5ae7aca12486c",
                     "label": "Service Image",
                     "name": "service_image",
-                    "type": "image",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -134,16 +110,23 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "id",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "choices": {
+                        "wealth": "Wealth Management",
+                        "tax": "Tax Planning",
+                        "retirement": "Retirement & Estate Planning",
+                        "family": "Family Office Services",
+                        "insurance": "Insurance Consulting",
+                        "business": "Business Services"
+                    },
+                    "default_value": [
+                        "wealth"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5afb8028ec082",
@@ -195,5 +178,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526433765
+    "modified": 1534900691
 }

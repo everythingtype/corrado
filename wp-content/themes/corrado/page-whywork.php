@@ -10,14 +10,7 @@
 
 			<h1><?php the_title(); ?></h1>
 
-			<div class="introimage">
-			<?php $intro_image = get_sub_field('intro_image'); ?>
-			<?php if ( $intro_image && $intro_image != '' ) : ?>
-				<?php echo spellerberg_get_image($intro_image) ?>
-			<?php else : ?>
-					<div class="tempimage"></div>
-			<?php endif; ?>
-			</div>
+			<figure class="svgimage whyworksvg"><?php echo get_template_part('images/svg/whywork.svg'); ?></figure>
 
 			<?php if( have_rows('blocks') ): ?>
 
