@@ -18,9 +18,9 @@ html * { outline: none; }
 	[data-whatinput="keyboard"] #s:focus,
 	[data-whatinput="keyboard"] #s2:focus { outline: auto; }
 
-body { transition: background-color 0.25s ease, color 0.25s ease; margin: 0; padding: 0; font-size: 2.5rem; line-height: 1.2857142857; font-family: "William Text", serif; letter-spacing: .0065em; font-style: normal; font-weight: 400; text-rendering: optimizeLegibility; position: relative; }
+body { transition: background-color 1s ease, color 1s ease; margin: 0; padding: 0; font-size: 2.5rem; line-height: 1.2857142857; font-family: "William Text", serif; letter-spacing: .0065em; font-style: normal; font-weight: 400; text-rendering: optimizeLegibility; position: relative; }
 body.white { color: #000; background: #fff; }
-body.gray { color: #000; background: #e5e5e5; }
+body.gray { color: #000; background: #cecece; }
 body.black { color: #fff; background: #000; }
 body.hasmodal { overflow: hidden; }
 
@@ -40,7 +40,7 @@ h1, h2 { font-family: "William Display", serif; font-weight: 700; }
 h1 abbr, h2 abbr { font-family: "William Display 2", serif; font-weight: 700; }
 
 
-img { max-width: 100%; background: #e5e5e5; }
+img { max-width: 100%; background: #cecece; }
 
 ul { padding: 0 1em; }
 li {}
@@ -107,7 +107,7 @@ header.pinned .inner {  margin-top: 0; }
 .white header .inner { background: #fff; }
 .white header svg { fill: #000000; }
 
-.gray header .inner { background: #e5e5e5; }
+.gray header .inner { background: #cecece; }
 .gray header.pinned .inner { background: #fff; }
 .gray header svg { fill: #000000; }
 
@@ -183,7 +183,7 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 .pagebody { overflow: hidden; transition: background-color 0.25s ease, color 0.25s ease;}
 
 .white .pagebody { background: #fff; }
-.gray .pagebody { background: #e5e5e5; }
+.gray .pagebody { background: #cecece; }
 .black .pagebody { background: #000; }
 
 .headerspacer { padding-top: 13.5rem; }
@@ -801,7 +801,7 @@ footer abbr { font-size: 1.1rem; }
 #lightbox .lightboxinner.visible { opacity: 1; }
 
 .whitelightbox .lightboxinner { color: #000; background-color: #fff; }
-.graylightbox .lightboxinner { color: #000; background-color: #e5e5e5; }
+.graylightbox .lightboxinner { color: #000; background-color: #cecece; }
 .blacklightbox .lightboxinner { color: #fff; background-color: #000; }
 
 #lightbox .lightboxinner .lightboxscrollable { height: 100%; overflow: auto; position: relative; overflow-y: scroll; -webkit-overflow-scrolling: touch; }
