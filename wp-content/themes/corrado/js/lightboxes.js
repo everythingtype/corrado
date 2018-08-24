@@ -1,6 +1,6 @@
 (function($) {
 
-  var ajaxEnabled = true;
+  var ajaxEnabled = false;
 
   var modalScrollTop = 0;
 	var modalisopen = false;
