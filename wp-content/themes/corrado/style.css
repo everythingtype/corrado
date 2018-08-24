@@ -37,7 +37,7 @@ h4 {}
 h5 {}
 
 h1, h2 { font-family: "William Display", serif; font-weight: 700; }
-h1 abbr, h2 abbr { font-family: "William Display 2", serif; font-weight: 700; }
+h1 abbr, h2 abbr { font-family: "William Display 2", serif; font-weight: 400; }
 
 
 img { max-width: 100%; background: #cecece; }
