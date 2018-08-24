@@ -825,16 +825,16 @@ footer abbr { font-size: 1.1rem; }
 .svgstroke { stroke: #000; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px; stroke-miterlimit: 10; vector-effect: non-scaling-stroke; }
 .black .svgstroke { stroke: #fff; }
 
-.svgimage.notfound { max-width: 614.33px; }
-.svgimage.home01 { max-width: 1054.43px; }
-.svgimage.home02 { max-width: 1075.51px ; }
-.svgimage.home03 { max-width: 968px; }
-.svgimage.home04 { max-width: 1295.55px; }
-.svgimage.whyworksvg { max-width: 453.55px; }
-.svgimage.services { max-width: 738.44px; }
-.svgimage.services-business { max-width: 432.44px; }
-.svgimage.services-family { max-width: 418.51px; }
-.svgimage.services-insurance { max-width: 413.34px; }
-.svgimage.services-retirement { max-width: 469px; }
-.svgimage.services-tax { max-width: 432.86px; }
-.svgimage.services-wealth {max-width: 416.67px; }
+.svgimage.notfound { max-width: 61.433rem; }
+.svgimage.home01 { max-width: 105.443rem; }
+.svgimage.home02 { max-width: 107.551rem ; }
+.svgimage.home03 { max-width: 96.8rem; }
+.svgimage.home04 { max-width: 129.555rem; }
+.svgimage.whyworksvg { max-width: 45.355rem; }
+.svgimage.services { max-width: 73.844rem; }
+.svgimage.services-business { max-width: 43.244rem; }
+.svgimage.services-family { max-width: 41.851rem; }
+.svgimage.services-insurance { max-width: 41.334rem; }
+.svgimage.services-retirement { max-width: 46.9rem; }
+.svgimage.services-tax { max-width: 43.286rem; }
+.svgimage.services-wealth {max-width: 41.667rem; }
