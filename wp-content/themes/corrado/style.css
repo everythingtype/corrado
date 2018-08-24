@@ -203,13 +203,13 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 
 .homepage .svgimage { margin: 12rem 0; }
 
-.homegrey { padding: 16.75rem 0; margin: 16.75rem 0 28.45rem 0; }
+.homegrey { padding: 6.75rem 0; margin: 16.75rem 0 28.45rem 0; }
 
 @media screen and (max-width: 800px) {
 
 	.homepage .svgimage { margin: 8rem 0; }
 
-	.homegrey { padding: 17.5rem 0; margin: 17.5rem 0 16.75rem 0; }
+	.homegrey { margin: 16.75rem 0; }
 	.homeintro { letter-spacing: 0.01em; }
 
 }
@@ -219,7 +219,7 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 	.homepage .svgimage { margin: 6rem 0; }
 
 	.homeintro { line-height: 1.2777777778; padding: 0 2rem; }
-	.homegrey { padding: 11.5rem 0 5.5rem; margin: 11.5rem 0 5.5rem 0; }
+	.homegrey { padding: 5.5rem 0; margin: 5.5rem 0; }
 
 }
 
