@@ -18,17 +18,17 @@
 
 				<div class="homegrey">
 
-					<p>We began as an accounting firm. In the two decades since, we&rsquo;ve come to understand that many of our clients need more than someone to file their tax returns&mdash;they need advisors who understand the full scope of their financial lives.</p>
-
 					<figure class="svgimage home02"><?php echo get_template_part('images/svg/home02.svg'); ?></figure>
 
-					<p>They need guidance on their investment portfolio, help with planning for retirement, direction on writing their wills, their prenups, their insurances.</p>
+					<p>We began as an accounting firm. In the two decades since, we&rsquo;ve come to understand that many of our clients need more than someone to file their tax returns&mdash;they need advisors who understand the full scope of their financial lives.</p>
 
 					<figure class="svgimage home03"><?php echo get_template_part('images/svg/home03.svg'); ?></figure>
 
-					<p>Our relationships-first approach to financial planning gives our clients the freedom to realize their brightest futures.</p>
+					<p>They need guidance on their investment portfolio, help with planning for retirement, direction on writing their wills, their prenups, their insurances.</p>
 
 					<figure class="svgimage home04"><?php echo get_template_part('images/svg/home04.svg'); ?></figure>
+
+					<p>Our relationships-first approach to financial planning gives our clients the freedom to realize their brightest futures.</p>
 
 					<div class="bodybutton"><a href="/why-work-with-us/">Why Work With Us</a></div>
 

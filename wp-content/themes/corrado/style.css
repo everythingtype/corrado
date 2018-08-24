@@ -201,14 +201,14 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 .homeintro { font-family: "Trio", sans-serif; text-align: left; overflow: hidden; letter-spacing: 0.015em; line-height: 1.4; padding: 0 4rem; }
 .homeintro p { margin: 3.5rem 0; }
 
-.homepage .svgimage { margin-bottom: 13rem; }
+.homepage .svgimage { margin: 12rem 0; }
 
 .homegrey { padding: 16.75rem 0; margin: 16.75rem 0 28.45rem 0; }
 
 @media screen and (max-width: 800px) {
 
-	.homepage .svgimage { margin-bottom: 29rem; }
-	.homepage .svgimage.home04 { margin-bottom: 12.1rem; }
+	.homepage .svgimage { margin: 8rem 0; }
+
 	.homegrey { padding: 17.5rem 0; margin: 17.5rem 0 16.75rem 0; }
 	.homeintro { letter-spacing: 0.01em; }
 
@@ -216,11 +216,10 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 
 @media screen and (max-width: 600px) {
 
+	.homepage .svgimage { margin: 6rem 0; }
+
 	.homeintro { line-height: 1.2777777778; padding: 0 2rem; }
 	.homegrey { padding: 11.5rem 0 5.5rem; margin: 11.5rem 0 5.5rem 0; }
-
-	.homepage .homeimage { margin-bottom: 9.5rem; }
-	.homepage .homeimage.last { margin-bottom: 5.8rem; }
 
 }
 
