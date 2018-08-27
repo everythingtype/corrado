@@ -2,9 +2,13 @@
 
 	<div class="notfound">
 		<div class="padding">
-			<h1>404</h1>
-			<p>The page you are looking for does not exist.</p>
+			<h1>Our apologies.<br />
+				We&rsquo;re unable to find the page you&rsquo;re looking for.</h1>
+			<p>404 page not found</p>
 			<figure class="svgimage notfound"><?php echo get_template_part('images/svg/notfound.svg'); ?></figure>
+
+					<div class="bodybutton"><a href="/">Homepage</a></div>
+
 		</div>
 	</div>
 
