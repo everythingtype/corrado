@@ -219,7 +219,12 @@
 
 		} else {
 
-			if ( scrollPosition > 20 ) {
+			var alittlebitofpadding = 0;
+			if ($('.alittlebitofpadding').length != 0) {
+				alittlebitofpadding = $('.alittlebitofpadding').outerHeight();
+			}
+
+			if ( scrollPosition > alittlebitofpadding ) {
 
 				if ( scrollPosition >= lastScrollPosition ) {
 
@@ -266,11 +271,16 @@
 
 	function pinfooter() {
 
+		var wpadminbar = 0;
+		if ($('#wpadminbar').length != 0) {
+			wpadminbar = $('#wpadminbar').outerHeight();
+		}
+
 		var pagebodyHeight = $('.pagebody').outerHeight();
 		var footerHeight = $('footer').outerHeight();
 		var windowHeight = window.innerHeight;
 
-		var adjustedPagebodyHeight = pagebodyHeight + footerHeight - windowHeight;
+		var adjustedPagebodyHeight = pagebodyHeight + footerHeight - windowHeight + wpadminbar;
 
 		var scrollPosition = $(window).scrollTop() + 1;
 
@@ -283,6 +293,21 @@
 	}
 
 	function setupHeights() {
+
+		var wpadminbar = 0;
+		if ($('#wpadminbar').length != 0) {
+			wpadminbar = $('#wpadminbar').outerHeight();
+		}
+
+		$('.adminspacer').css({'height': wpadminbar + 'px'});
+
+		if ($('.navinner').length != 0) {
+			$('.navinner').css({'top': wpadminbar + 'px'});
+		}
+
+		if ($('#lightbox').length != 0) {
+			$('#lightbox').css({'top': wpadminbar + 'px'});
+		}
 
 		var sitefooter = 0;
 		if ($('.sitefooter').length != 0) {

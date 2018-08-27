@@ -37,6 +37,9 @@
 <header>
 	<div class="inner visible">
 
+		<div class="adminspacer"></div>
+		<div class="alittlebitofpadding"></div>
+
 		<a href="/" class="logo topstyle">
 			<span class="wordmark graphic"><?php echo get_template_part('images/corrado-wordmark'); ?></span>
 			<span class="stacked graphic"><?php echo get_template_part('images/corrado-stacked'); ?></span>
