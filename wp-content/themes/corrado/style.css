@@ -30,15 +30,15 @@ abbr { text-decoration: none; font-family: "William Text 2", serif; text-transfo
 
 button { font-family: inherit; font-size: inherit; cursor: pointer; }
 
-h1 { margin: 3.2rem auto 3.4rem auto; font-size: 6rem; line-height: 6.5rem; text-align: center; letter-spacing: .015em; }
-h2 { margin: 0 0 4rem 0; font-size: 6rem; line-height: 6.5rem; letter-spacing: .015em; }
+h1 { font-family: "William Display", serif; font-weight: 700; margin: 3.2rem auto 3.4rem auto; font-size: 6rem; line-height: 6.5rem; text-align: center; letter-spacing: .015em; }
+h2 { font-family: "William Display", serif; font-weight: 700; margin: 0 0 4rem 0; font-size: 6rem; line-height: 6.5rem; letter-spacing: .015em; }
 h3 { font-size: 2.5rem; line-height: 1.2857142857; font-weight: 400; font-style: italic; margin: 3.5rem 0 3.7rem 0; }
 h4 {}
 h5 {}
 
-h1, h2 { font-family: "William Display", serif; font-weight: 700; }
 h1 abbr, h2 abbr { font-family: "William Display 2", serif; font-weight: 400; }
 
+h1 span.kern125 { letter-spacing: -.125em; }
 
 img { max-width: 100%; background: #cecece; }
 
