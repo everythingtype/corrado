@@ -16,7 +16,6 @@
 				<?php while ( have_rows('forms') ) : the_row(); ?>
 
 					<?php $form_download = get_sub_field('form_download'); ?>
-					<?php $form_download = '#'; ?>
 
 					<?php if ( $form_download && $form_download != '' ) : ?>
 
@@ -34,7 +33,7 @@
 								<?php echo wpautop($form_description); ?>
 							<?php endif; ?>
 
-							<p class="button"><a href="<?php echo $form_download; ?>">Download</a></p>
+							<p class="button"><a href="<?php echo $form_download; ?>" download>Download</a></p>
 
 						</div>
 
