@@ -237,6 +237,37 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 
 }
 
+/* Homegrid */
+
+.homegrid { display: grid;  grid-template-columns: auto 1000px auto; }
+.homegrid .cell { position: relative; }
+.homegrid figure { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.homegrid svg { width: 100%; }
+
+.homegrid .cell01 { grid-column-start: 1; }
+.homegrid .cell01 figure {}
+
+.homegrid .cell02 { grid-column-start: 2; }
+.homegrid .cell02 figure {}
+
+.homegrid .cell03 { grid-column-start: 2; }
+.homegrid .cell03 figure { }
+
+.homegrid .cell04 { grid-column-start: 2; }
+.homegrid .cell04 figure {}
+
+.homegrid .cell05 { grid-column-start: 2; }
+.homegrid .cell05 figure {}
+
+.homegrid .cell06 { grid-column-start: 2; }
+.homegrid .cell06 figure {}
+
+.homegrid .cell07 { grid-column-start: 2; }
+.homegrid .cell07 figure {}
+
+.homegrid .cell08 { grid-column-start: 3; }
+.homegrid .cell08 figure {}
+
 /* Contact Include */
 
 .contactinclude { padding: 14rem 4rem 53rem 4rem; margin: 0 auto; max-width: 107.6rem; text-align: center; font-family: "Trio", sans-serif; line-height: 3.5rem; letter-spacing: 0.005em; }
