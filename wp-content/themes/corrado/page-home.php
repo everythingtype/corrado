@@ -8,7 +8,7 @@
 
 		<div class="homepage">
 
-			<h1><span>W</span>e are the <br />Corrado Financial Group</h1>
+			<h1><span class="kern125">W</span>e are the <br />Corrado Financial Group</h1>
 
 			<div class="homeintro">
 
