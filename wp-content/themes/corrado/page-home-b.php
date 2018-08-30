@@ -6,23 +6,26 @@
 
 	<?php while (have_posts()) : the_post(); ?>
 
-		<div class="homepage">
+		<div class="homepageb">
 
 			<h1><span class="kern125">W</span>e are the <br />Corrado Financial Group</h1>
 
 			<div class="homeintro">
 
-				<figure class="svgimage homeb01 fillimage"><?php echo get_template_part('images/svg/home-b-01.svg'); ?></figure>
+				<figure class="svgimage homehero fillimage"><?php echo get_template_part('images/svg/home01.svg'); ?></figure>
 
 				<p>We help our clients plan and chart their financial futures&mdash;so that they can live more fully in the present.</p>
 
 				<div class="homegrey">
 
 					<div class="homegrid">
+
 						<div class="cell cell01">
 							<figure><?php echo get_template_part('images/svg/homegrid-g.svg'); ?></figure>
 						</div>
+
 						<div class="cell cell02">
+							<div class="ratio"></div>
 							<figure><?php echo get_template_part('images/svg/homegrid-f.svg'); ?></figure>
 						</div>
 
@@ -32,6 +35,7 @@
 						</div>
 
 						<div class="cell cell04">
+							<div class="ratio"></div>
 							<figure><?php echo get_template_part('images/svg/homegrid-d.svg'); ?></figure>
 						</div>
 
@@ -41,6 +45,7 @@
 						</div>
 
 						<div class="cell cell06">
+							<div class="ratio"></div>
 							<figure><?php echo get_template_part('images/svg/homegrid-b.svg'); ?></figure>
 						</div>
 
