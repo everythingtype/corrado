@@ -1,6 +1,7 @@
 <?php
 
 require_once( 'functions/ajax.php' );
+require_once( 'functions/analytics.php' );
 require_once( 'functions/cpt-tips.php' );
 require_once( 'functions/enqueue.php' );
 require_once( 'functions/forms.php' );
