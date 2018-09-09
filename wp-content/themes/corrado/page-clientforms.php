@@ -21,7 +21,7 @@
 
 						<div class="form">
 
-							<div class="fileicon"><a href="<?php echo $form_download; ?>"><?php echo get_template_part('images/pdf'); ?></a></div>
+							<div class="fileicon"><a href="<?php echo $form_download; ?>" target="_blank" download><?php echo get_template_part('images/pdf'); ?></a></div>
 
 							<?php $form_title = get_sub_field('form_title'); ?>
 							<?php if ( $form_title && $form_title != '' ) : ?>
@@ -33,7 +33,7 @@
 								<?php echo wpautop($form_description); ?>
 							<?php endif; ?>
 
-							<p class="button"><a href="<?php echo $form_download; ?>" download>Download</a></p>
+							<p class="button"><a href="<?php echo $form_download; ?>" target="_blank" download>Download</a></p>
 
 						</div>
 
