@@ -43,6 +43,8 @@
 
 	function scrollDisable() {
 
+		// console.log('scrollDisable');
+
 		if ( modalisopen == false ) {
 
 			if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -74,6 +76,8 @@
 
 	function scrollEnable() {
 
+		// console.log('scrollEnable');
+
 		if ( modalisopen == true ) {
 
 			if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -99,6 +103,8 @@
 
 	function topnavOpen() {
 
+		// console.log('topnavOpen');
+
 		if ( !navisopen ) {
 
 			navisopen = true;
@@ -112,6 +118,8 @@
 	}
 
 	function topnavClose() {
+
+		// console.log('topnavClose');
 
 		if ( navisopen ) {
 
@@ -137,12 +145,18 @@
 	}
 
 	function handleResize() {
+
+		// console.log('handleResize');
+
 		$('.carousel').flickity('resize');
 		setupHeights();
 		handleScroll();
 	}
 
 	function handleScroll() {
+
+		// console.log('handleScroll');
+
 		pinheader();
 		pinfooter();
 	}
@@ -150,7 +164,7 @@
 
 	function headerSetToMidPage() {
 
-		// console.log('mid page');
+		// console.log('headerSetToMidPage');
 
 		$('header').addClass('pinned');
 		$('header').addClass('hidden');
@@ -161,7 +175,7 @@
 
 	function headerSetToPageTop() {
 
-		// console.log('page top');
+		// console.log('headerSetToPageTop');
 
 		scrollingup = false;
 		scrollingdown = false;
@@ -174,6 +188,8 @@
 	}
 
 	function headerFadeOut() {
+
+		// console.log('headerFadeOut');
 
 		$('header .inner').removeClass('visible')
 
@@ -190,15 +206,17 @@
 
 	function headerFadeIn() {
 
-			$('header').removeClass('hidden')
-			$('header .inner').addClass("visible");
+		// console.log('headerFadeIn');
+
+		$('header').removeClass('hidden')
+		$('header .inner').addClass("visible");
 
 	}
 
 
 	function contactButtonHide() {
 
-		// console.log('hide');
+		// console.log('contactButtonHide');
 
 		$('.contactbutton a').removeClass('visible')
 
@@ -217,7 +235,7 @@
 
 	function contactButtonShow() {
 
-			// console.log('show');
+			// console.log('contactButtonShow');
 
 			$('.contactbutton').removeClass('hidden')
 			$('.contactbutton a').addClass("visible");
@@ -225,6 +243,8 @@
 	}
 
 	function pinheader() {
+
+		// console.log('pinheader');
 
 		var scrollPosition = $(window).scrollTop();
 
@@ -250,7 +270,11 @@
 
 			if ( scrollPosition > alittlebitofpadding ) {
 
-				if ( scrollPosition >= lastScrollPosition ) {
+				if ( scrollPosition == lastScrollPosition ) {
+
+				} else {
+
+					if ( scrollPosition > lastScrollPosition ) {
 
 						if ( !scrollingdown ) {
 
@@ -264,17 +288,18 @@
 						}
 
 
-				} else {
-
-					if ( !scrollingup ) {
-
-						scrollingdown = false;
-						scrollingup = true;
-
-						headerFadeIn();
-
 					} else {
 
+						if ( !scrollingup ) {
+
+							scrollingdown = false;
+							scrollingup = true;
+
+							headerFadeIn();
+
+						} else {
+
+						}
 
 					}
 
@@ -294,6 +319,8 @@
 	}
 
 	function pinfooter() {
+
+		// console.log('pinfooter');
 
 		var wpadminbar = 0;
 		if ($('#wpadminbar').length != 0) {
@@ -317,6 +344,8 @@
 	}
 
 	function setupHeights() {
+
+		// console.log('setupHeights');
 
 		var wpadminbar = 0;
 		if ($('#wpadminbar').length != 0) {
@@ -401,7 +430,9 @@
 	});
 
 	$(window).scroll( function() {
+
 		handleScroll();
+
 	});
 
 })(jQuery);
