@@ -336,7 +336,7 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 .ourservices button { background: transparent; border: none; margin: 4.2rem auto 11rem auto; }
 .ourservices button svg { fill: #cbcbcb; }
 
-.ourservices .introimage { margin: 5.4rem 0; }
+.ourservices .introimage { margin: 5.4rem 0; margin: 5.4rem auto; max-width: 73.844rem; }
 
 .ourservices .tempimage { background: #b2b2b2; max-width: 76rem; height: 46.8571rem; margin: auto; }
 
