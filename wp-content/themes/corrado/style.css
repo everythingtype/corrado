@@ -336,7 +336,7 @@ header .controls li { margin: 0; padding: 0; display: inline-block; }
 .ourservices button { background: transparent; border: none; margin: 4.2rem auto 11rem auto; }
 .ourservices button svg { fill: #cbcbcb; }
 
-.ourservices .introimage { margin: 5.4rem 0; margin: 5.4rem auto; max-width: 73.844rem; }
+.ourservices .introimage { margin: 5.4rem auto; max-width: 73.844rem; }
 
 .ourservices .tempimage { background: #b2b2b2; max-width: 76rem; height: 46.8571rem; margin: auto; }
 
@@ -868,7 +868,7 @@ footer abbr { font-size: 1.1rem; }
 /* svgimage */
 
 .svgimage { position: relative; }
-.svgimage svg { position: absolute; top: 0; left: 0; right: 0; left: 0; }
+.svgimage svg { position: absolute; top: 0; left: 0; right: 0; }
 
 .svgimage.fillimage svg { fill: #000; }
 .black .svgimage.fillimage svg { fill: #fff; }
@@ -882,10 +882,22 @@ footer abbr { font-size: 1.1rem; }
 .svgimage.home03 { max-width: 96.8rem; padding-top: 68.0785123967%; }
 .svgimage.home04 { max-width: 129.555rem; padding-top: 48.5508085369%; }
 .svgimage.whyworksvg { max-width: 45.355rem; padding-top: 85.2361353855%; }
-.svgimage.services { max-width: 73.844rem; padding-top: 78.7543326401%; }
-.svgimage.services-business { max-width: 43.244rem; padding-top: 93.9576317219%; }
-.svgimage.services-family { max-width: 41.851rem; padding-top: 54.9839059318%; }
-.svgimage.services-insurance { max-width: 41.334rem; padding-top: 78.3686934759%; }
-.svgimage.services-retirement { max-width: 46.9rem; padding-top: 71.2765957447%; }
-.svgimage.services-tax { max-width: 43.286rem; padding-top: 94.4820360588%; }
-.svgimage.services-wealth {max-width: 41.667rem; padding-top: 64.7676930969%; }
+.svgimage.services { padding-top: 78.7543326401%; }
+
+.services-business { max-width: 43.244rem; margin: auto; }
+.services-business .svgimage {  padding-top: 93.9576317219%; }
+
+.services-family { max-width: 41.851rem; margin: auto; }
+.services-family .svgimage { padding-top: 54.9839059318%; }
+
+.services-insurance { max-width: 41.334rem; margin: auto; }
+.services-insurance .svgimage { padding-top: 78.3686934759%; }
+
+.services-retirement { max-width: 46.9rem; margin: auto; }
+.services-retirement .svgimage { padding-top: 71.2765957447%; }
+
+.services-tax { max-width: 43.286rem; margin: auto; }
+.services-tax .svgimage { padding-top: 94.4820360588%; }
+
+.services-wealth { max-width: 41.667rem; margin: auto; }
+.services-wealth .svgimage { padding-top: 64.7676930969%; }

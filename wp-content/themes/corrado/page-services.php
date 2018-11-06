@@ -40,17 +40,17 @@
 
 							<?php $service_image = get_sub_field('service_image'); ?>
 							<?php if ( $service_image == 'wealth' ) : ?>
-								<figure class="svgimage services-wealth"><?php echo get_template_part('images/svg/services-wealth.svg'); ?></figure>
+								<div class="services-wealth"><figure class="svgimage"><?php echo get_template_part('images/svg/services-wealth.svg'); ?></figure></div>
 							<?php elseif ( $service_image == 'tax' ) : ?>
-								<figure class="svgimage services-tax"><?php echo get_template_part('images/svg/services-tax.svg'); ?></figure>
+								<div class="services-tax"><figure class="svgimage"><?php echo get_template_part('images/svg/services-tax.svg'); ?></figure></div>
 							<?php elseif ( $service_image == 'retirement' ) : ?>
-								<figure class="svgimage services-retirement"><?php echo get_template_part('images/svg/services-retirement.svg'); ?></figure>
+								<div class="services-retirement"><figure class="svgimage"><?php echo get_template_part('images/svg/services-retirement.svg'); ?></figure></div>
 							<?php elseif ( $service_image == 'family' ) : ?>
-								<figure class="svgimage services-family"><?php echo get_template_part('images/svg/services-family.svg'); ?></figure>
+								<div class="services-family"><figure class="svgimage"><?php echo get_template_part('images/svg/services-family.svg'); ?></figure></div>
 							<?php elseif ( $service_image == 'insurance' ) : ?>
-								<figure class="svgimage services-insurance"><?php echo get_template_part('images/svg/services-insurance.svg'); ?></figure>
+								<div class="services-insurance"><figure class="svgimage"><?php echo get_template_part('images/svg/services-insurance.svg'); ?></figure></div>
 							<?php elseif ( $service_image == 'business' ) : ?>
-								<figure class="svgimage services-business"><?php echo get_template_part('images/svg/services-business.svg'); ?></figure>
+								<div class="services-business"><figure class="svgimage"><?php echo get_template_part('images/svg/services-business.svg'); ?></figure></div>
 							<?php endif; ?>
 
 							<?php $service_description = get_sub_field('service_description'); ?>
