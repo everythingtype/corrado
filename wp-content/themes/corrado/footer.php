@@ -17,7 +17,7 @@
 
 				<h3>NY Office</h3>
 
-				<address>25 W. 43rd Street #920<br />
+				<address>25 W. 43rd Street #320<br />
 				New York, NY 10036<br />
 				<abbr title="Telephone">T</abbr>  <a href="tel:1-212-730-5444">212 730 5444</a><br />
 				<abbr title="Fax">F</abbr>  <a href="tel:1-212-730-5450">212 730 5450</a></address>
