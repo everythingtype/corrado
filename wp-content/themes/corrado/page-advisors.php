@@ -20,6 +20,7 @@
 					'post_parent' => $thisid,
 					'order' => 'ASC',
 					'orderby' => 'menu_order',
+					'nopaging' => true,
 				);
 
 				$the_query = new WP_Query($args);
